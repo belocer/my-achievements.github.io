@@ -1,0 +1,63 @@
+body{
+	background: url(http://subtlepatterns.com/patterns/light_noise_diagonal.png);
+	font: 1em 'PT Sans', Tahoma, Arial;
+}
+
+#wrapper{
+	perspective: 500px;
+	-o-perspective: 500px;
+	-ms-perspective: 500px;
+	-moz-perspective: 500px;
+	-webkit-perspective: 500px;
+	width: 400px;
+	height: 200px;
+}
+
+#myframe{
+	width: 450px;
+	height: 350px;
+}
+
+#container {
+	background: rgba(0,0,0,.3);
+	width: 450px;
+	height: 350px;
+	margin: 80px;
+	line-height: 150px;
+	text-align: center;
+	font-size: 1.2em;
+	color: white;
+	border: 3px solid #fff;
+	border-radius: 8px;
+	
+	/******** Сдвиг Вращение Увеличение Искожение *******/
+	/*transform: translate(30px) rotate(30deg) scale(1) skewX(30deg) skewY(-30deg);*/
+	/*-o-transform: translate(30px) rotate(30deg) scale(1) skewX(30deg) skewY(-30deg);*/
+	/*-ms-transform: translate(30px) rotate(30deg) scale(1) skewX(30deg) skewY(-30deg);*/
+	/*-moz-transform: translate(30px) rotate(30deg) scale(1) skewX(30deg) skewY(-30deg);*/
+	/*-webkit-transform: translate(30px) rotate(30deg) scale(1) skewX(30deg) skewY(-30deg);*/
+	
+	/*********** Вращение относительно какого угла или точки *************/
+	/*transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-webkit-transform-origin: top left;*/
+	
+	/*Трансформация отнсительно оси X или Y*/
+	/*transform: rotateX(30deg);*/
+	/*-o-transform: rotateX(30deg);*/
+	/*-ms-transform: rotateX(30deg);*/
+	/*-moz-transform: rotateX(30deg);*/
+	/*-webkit-transform: rotateX(39deg);*/
+	
+	/*Трансформация отнсительно оси X Y Z*/
+	transform: rotate3d(1,0,-1,30deg);
+	-o-transform: rotate3d(1,0,-1,30deg);
+	-ms-transform: rotate3d(1,0,-1,30deg);
+	-moz-transform: rotate3d(1,0,-1,30deg);
+	-webkit-transform: rotate3d(1,0,-1,39deg);
+	
+}
+
+

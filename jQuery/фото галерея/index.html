@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
+
+<meta name="description" content="Image gallery with description in 4 lines of jQuery code" />
+<meta name="keywords" content="jquery tutorial,image gallery, jquery delegate" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+<title>Image gallery with description in 4 lines of jQuery code</title>
+</head>
+<body> 
+
+
+<div id="page">
+
+<h1>Image gallery with description in 4 lines of jQuery code</h1>
+
+<div id="gallery">
+	<div id="panel">
+		<img id="largeImage" src="images/image_01_large.jpg" />
+		<div id="description">1st image description</div>
+	</div>
+
+	<div id="thumbs">
+        <img src="images/image_01_thumb.jpg" alt="1st image description" />
+        <img src="images/image_02_thumb.jpg" alt="2nd image description" />
+        <img src="images/image_03_thumb.jpg" alt="3rd image description" />
+        <img src="images/image_04_thumb.jpg" alt="4th image description" />
+        <img src="images/image_05_thumb.jpg" alt="5th image description" />
+	</div>
+</div>
+
+</div>
+
+<script>
+
+$('#thumbs').delegate('img','click', function(){
+	$('#largeImage').attr('src',$(this).attr('src').replace('thumb','large'));
+	$('#description').html($(this).attr('alt'));
+});
+
+</script>
+
+<div id="demo">
+	<h2>This is only a demo page! <br />Visit <a href="http://workshop.rs/2010/07/create-image-gallery-in-4-lines-of-jquery">workshop.rs</a> for full article.</h2>
+</div>
+
+
+</body>
+</html>

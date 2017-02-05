@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+	<title>Lesson 8</title>
+<script>
+//Переменные
+	var $click=0;
+	var $dblclick=0;
+	var $mouseover=0;
+	var $mouseout=0;
+	var $mouseenter=0;
+	var $mouseleave=0;
+	var $mouseup=0;
+	var $mousedown=0;
+	var $contextmenu=0;
+	var $keydown=0;
+	var $keyup=0;
+	var $keypress=0;
+	var $change=0;
+    var $focus=0;
+    var $blur=0;
+		//Функция записывающая данные в Див2
+	function ShowAll(){                     
+	document.getElementById('div2').innerHTML='click: '+$click+'<br>'+
+	                                          'dblclick: '+$dblclick+'<br>'+
+											  'mouseover: '+$mouseover+'<br>'+
+											  'mouseout: '+$mouseout+'<br>'+
+											  'mouseenter: '+$mouseenter+'<br>'+
+											  'mouseleave: '+$mouseleave+'<br>'+
+											  'mousedown: '+$mousedown+'<br>'+
+											  'mouseup: '+$mouseup+'<br>'+
+											  'contextmenu: '+$contextmenu+'<br>'+'<hr>'+
+											  'keydown: '+$keydown+'<br>'+
+											  'keyup: '+$keyup+'<br>'+
+											  'keypress: '+$keypress+'<br>'+
+                                              'change: '+$change+'<br>' +
+                                              'focus: '+$focus+'<br>' +
+                                              'blur: '+$blur+'<br>';
+	}   
+	 //Функция добавляющая каждое событие 1 значение, и запускает функцию шоуэл                                       
+ function my_click($event) {
+                       $click++;
+                       ShowAll();
+						/*alert(
+						'ClientX: '+$event.clientX+'clientY: '+$event.clientY+'\n'+
+						'ScreenX: '+$event.screenX+'ScreenY: '+$event.screenY+'\n'+
+						' altKey: '+$event.altKey+
+						' ctrlKey: '+$event.ctrlKey+
+						' shiftKey: '+$event.shiftKey+'\n');	
+						}*/}
+	function my_dblclick() {$dblclick++; ShowAll();}
+	function my_mouseover() {$mouseover++; ShowAll();}
+	function my_mouseout() {$mouseout++; ShowAll();} 
+	function my_mouseenter() {$mouseenter++; ShowAll();} 
+	function my_mouseleave() {$mouseleave++; ShowAll();}
+	function my_mousedown() {$mousedown++; ShowAll();}
+	function my_mouseup() {$mouseup++; ShowAll();}
+	function my_noyandex($event) {$event.preventDefault();}
+	function my_keydown() {$keydown++; ShowAll();} 
+	function my_keyup() {$keyup++; ShowAll();} 
+	//Функция нажатия клавиши на клавиатуре
+	function my_keypress($event) {
+	$keypress++; 
+	ShowAll();
+var x = ($event.keyCode || $event.which); //сво-во содержащее код нажатой клавиши||событие.инфо о кнопке
+var x_char = String.fromCharCode(x); //Возвращает строку,- значение юникода в символы
+    // alert(
+    //     'x: '+ x + '\n' + 
+    //     'x_char: ' + x_char + '\n' +
+    //     'altKey: ' + $event.altKey + ' ' +
+    //     'ctrlKey: ' + $event.ctrlKey + ' ' +
+    //     'shiftKey: ' + $event.shiftKey
+    //    );
+
+   if (
+       (x_char=='a')||
+       (x_char=='A')||
+       (x_char=='b')||
+       (x_char=='B')
+      )
+   {
+    $event.preventDefault(); //Отмена события по умолчанию
+   };   
+}  
+	function my_change(){$change++;ShowAll();}//Изменение значения инпута
+	function my_focus(){$focus++; ShowAll();}//Фокус
+	function my_blur(){$blur++; ShowAll();}//Потеря фокуса
+	</script>
+</head>
+<body>               
+<div id="div1" 
+      style="border: 1px solid black;"
+      onClick="my_click(event);"
+      onMouseOver="my_mouseover();"
+      onMouseOut="my_mouseout();"
+      onMouseEnter="my_mouseenter();"
+      onMouseLeave="my_mouseleave();"
+      onDblClick="my_dblclick();"
+      onContextMenu="my_contextmenu(event);"
+      onMouseDown="my_mousedown();"
+      onMouseUp="my_mouseup();"
+      onKeyUp="my_keyup();"
+      onKeyDown="my_keydown();"
+      onKeyPress="my_keypress(event);"
+ > 
+    Some text...<br>
+	Some text...<br>
+	<input type=text onChange="my_change();"
+                   onFocus="my_focus();"
+                   onBlur="my_blur();"
+  >
+</div>
+
+<a href="http://www.ya.ru" onClick="my_noyandex(event);">Yandex</a><br>
+
+<div id=div2 style="border: 1px solid black">
+Some text...<br>
+</div>
+
+</body>
+</html>
+
+<!-- <script>
+	var $click=0;
+	                       //счетчик кликов!!!!!!!
+	</script>
+</head>
+<body>
+<div id="div1" style="border: 1px solid black"
+	onClick="$click++; alert('Click! ('+$click+')');" -->

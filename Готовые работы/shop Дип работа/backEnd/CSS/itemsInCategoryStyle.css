@@ -1,0 +1,212 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #2980b9;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+
+section {
+	margin: 20px auto;
+	width: 960px;
+	background: #ecf0f1;
+	height: 1085px;
+	box-shadow: 0 0 10px rgba(26, 26, 26, 0.79);
+}
+
+/*********************NAV MENU*********************/
+nav {
+	width: 180px;
+	height: 1085px;
+	background: #34495e;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+#label img{
+	width: 180px;
+	height: 90px;
+	margin-top: -20px;
+	margin-left: 0;
+
+}
+
+nav>ul>li>a {
+	display: inline-block;
+	width: 180px;
+	height: 50px;
+	margin-bottom: 15px;
+	margin-top: 20px;
+	position: relative;
+	line-height:  50px
+}
+
+nav>ul>li>a:hover {
+	background: rgba(43, 58, 72, 0.59);
+}
+
+nav>ul>li {
+	list-style: none;
+}
+
+nav>ul>li>a>span {
+	color: #95a5a6;
+	font: 16px 'Proxima Nova Light';
+	font-weight: 600;
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	left: 46px;
+}
+
+nav>ul>li:nth-child(4) a{
+	background: #243342;
+}
+
+nav>ul>li:nth-child(4) a>span{
+	background: #243342;
+	color: white;
+}
+
+nav>ul>li>a>img {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	margin-top: 9px;
+}
+
+section>div {
+	width: 780px;
+	height: 1080px;
+	overflow: hidden;
+}
+
+/******************ВЫЙТИ************************/
+#goOut {
+	text-align: center;
+	position: absolute;
+	bottom: 25px;
+	left: 35px;
+}
+
+#goOut div {
+	color: white;
+	font: 16px 'Proxima Nova';
+}
+
+#goOut a {
+	color: #2ecc71;
+	font: 16px 'Proxima Nova';
+}
+
+
+/**********ЗАГОЛОВОК ЗАКАЗЫ**********/
+h1 {
+	overflow: hidden;
+	font: 48px 'Proxima Nova Light';
+	padding-top: 25px;
+	color: #34495e;
+	text-indent: 20px;
+}
+
+/**********************ТАБЛИЦА***********************/
+table {
+	width: 740px;
+	background: white;
+	margin: 25px auto;
+	border: 2px solid #e0e0e0;
+	border-collapse: collapse;
+}
+
+th {
+	font: bold 14px 'Proxima Nova';
+	color: #95a5a6;
+	height: 48px;
+	text-align: center;
+}
+table tr th:nth-child(2){
+	text-align: left;
+	text-indent: 107px;
+}
+
+td {
+	text-align: center;
+}
+
+table tr td:first-child {
+	width: 210px;
+	margin: 0;
+	padding: 0;
+	font: bold 16px 'Proxima Nova';
+	color: #2c3e50;
+}
+
+tr {
+	width: 	720px;
+	height: 55px;
+	border-top: 2px solid #e0e0e0;
+}
+
+tbody>tr:hover {
+	border-left: 4px solid #8e44ad;
+	background: rgba(164, 190, 223, 0.12);
+	cursor: pointer;
+}
+
+#headTable:hover {
+	border-left: 0 solid #e2e2e2;
+	background: rgba(255, 255, 255, 0.12);
+	cursor: default;
+}
+
+table tr td:nth-child(2){
+	font: 14px 'Proxima Nova';
+	color: #636363;
+	border-bottom : 1px dashed #1ba254;
+	width: 300px
+}
+
+table tr td:nth-child(3) a{
+	font: 14px 'Proxima Nova Semibold';
+	color: #8e44ad;
+	line-height: 55px;
+}
+
+table tr td:nth-child(3){
+	text-align: right;
+	padding-right: 25px;
+}
+
+/**************************ДОБАВЛЕНИЕ КАТЕГОРИИ*********************************/
+#currentCategory {
+	height: 40px;
+	width: 600px;
+	float: left;
+	padding-left: 20px;
+	margin: 10px auto;
+}
+
+#currentCategory span {
+	font: 16px 'Proxima Nova Semibold';
+	color: #2c3e50;
+}
+#currentCategory input {
+	font: 16px 'Proxima Nova Semibold';
+	color: #2c3e50;
+	width: 240px;
+	height: 32px;
+	text-indent: 5px;
+}
+#currentCategory a {
+	font: 14px 'Proxima Nova Semibold';
+	color: #02873a;
+}

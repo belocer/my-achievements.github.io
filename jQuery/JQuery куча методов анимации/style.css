@@ -1,0 +1,29 @@
+.rou{
+	color: red;
+}
+
+.riz{
+	color: green;
+}
+
+li{
+	display: inline-block;
+}
+
+.active{
+	color: red;
+}
+
+.modify{
+	transform: rotate(360deg);
+	transition: transform 1.5s;
+}
+
+.container button img{
+	width: 100px;
+}
+
+.container button {
+	display: inline-block;
+	border-radius: 50%;
+}

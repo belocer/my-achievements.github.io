@@ -1,0 +1,19 @@
+*{
+	transition: all 1s;
+	box-sizing: border-box;
+}
+
+body{
+	background: url(http://subtlepatterns.com/patterns/grid.png);
+	font: 1em 'PT Sans', Helvetica, Tahoma, Arial, sans-serif;
+	color: #333;
+}
+
+.container {
+	margin: 50px;
+	/*column-count: 3;*//* Колличество коллонок */
+	column-width: 200px; /*ширина колонок*/
+	column-gap: 100px; /*ширина между колонками*/
+	column-rule: 2px solid rgba(0,0,0,.5); /*Разделитель колонки описывается так же как бордер*/
+	/*Работает везде кроме IE*/
+}

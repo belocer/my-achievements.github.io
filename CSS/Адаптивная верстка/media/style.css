@@ -1,0 +1,49 @@
+*{
+	transition: all .2s;
+}
+body{
+	background: url(http://subtlepatterns.com/patterns/bedge_grunge.png);
+	font: 1em 'PT Sans', Helvetica, Tahoma, Arial, sans-serif;
+	padding-top: 15px;
+}
+
+.block{
+	background: #333;
+	width: 940px;
+	height: 200px;
+	margin: 10px auto;
+	border-radius: 5px;
+	box-shadow: 2px 3px 3px rgba(0,0,0,.6);
+	position: relative;
+}
+
+@media only screen and (min-width: 610px){
+.block:after {
+	content: 'New element';
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	background: #555;
+	border-radius: 10px 1px;
+	padding: 10px;
+	color: #eee;
+}
+}
+@media only screen and (max-width: 950px){  
+	/* Когда ширина окна становится меньше 950px тогда меняем ширину и бэкграунд 600px и #24476c*/
+	.block {
+		width: 600px;
+		background: #24476c;
+	}	
+}
+
+@media only screen and (max-width: 610px){  
+	/* Когда ширина окна становится меньше 610px тогда меняем ширину и бэкграунд 600px и #24476c*/
+	.block {
+		width: 320px;
+		background: #59A059;
+	}	
+	.second, .third{
+		height: 50px;
+	}
+}

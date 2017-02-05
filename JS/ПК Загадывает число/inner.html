@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<p id="resultat">Результат</p>
+	<script>
+	function RND(min,max){
+		return Math.floor(Math.random()*(max-min+1)+min);
+	}
+	do{	
+	var N=RND(1,100);
+	document.getElementById("resultat").innerHTML="Попытка 1";
+	document.write("<br>");
+	var count = 0;
+	do
+	{
+		count++;
+		var C=+prompt("Попытка "+count+". Введите число:");
+		if (C>N) document.write(count+". "+C+" Перелет<br>");
+		if (C<N) document.write(count+". "+C+" Недолет<br>");
+		if (C == N) document.write(count+". "+C+" Угадал<br>");
+ 	}
+ 	while(C!=N && count<10);
+ 	if(count>10)document.write("Игра окончена");
+ 	var ans=confirm("Повторить?");
+ }
+ while(ans);
+ document.write("Всего наилучшего!");
+	</script>
+	
+</body>
+</html>

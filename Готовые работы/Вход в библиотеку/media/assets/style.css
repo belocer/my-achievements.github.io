@@ -1,0 +1,77 @@
+/*Заголовок и кнопка по центру*/
+#tabl, #tabl2, #tabl3, #tabl4, #tabl5{
+	text-align: center;
+}
+/*Кнопка*/
+#but{
+	font-size: 17px;
+	border-radius: 15px;
+}
+
+/*Фон в таблице*/
+tr{
+	background-color: #E2E4E7;
+}
+
+/*Центруем*/
+body{
+	margin: 0 auto;
+	padding: 0 auto;
+	/*background: black;*/
+	overflow: hidden;
+	width: 900px;
+	position: relative;
+}
+
+#size{
+	z-index: -100;
+	position: absolute;
+	top: -239px;
+	right: -510px;
+}
+
+#wrapper{
+	display: block;
+}
+
+#centr{
+	width: 468px;
+	float: left;
+}
+
+#left, #right{
+	float: left;
+	width: 200px;
+	margin: 2px;
+}
+
+#bottom1, #table_center{
+	clear: both;
+	text-align: center;
+}
+
+#logged, #loged, #logout{
+	display: block;
+	text-align: center;
+	padding: 35px;
+}
+/*Форма входа*/
+#bender{
+	border: 1px solid white;
+	border-radius: 10px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0 auto;
+	width: 200px;
+	height: 260px;
+	background-color: #D3D5D8;
+	position: absolute;
+	top: 284px;
+	right: 25px;
+}
+
+/*Ошибки регистрации*/
+#war{
+	position: absolute;
+	top: 280px;
+}

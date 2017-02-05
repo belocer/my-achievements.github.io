@@ -1,0 +1,207 @@
+/*1 общая инфа
+2 работы
+3 контакты
+4обратная связь*/
+*{
+	transition: all .5s;
+}
+body {
+	transition: all .5s;
+}
+
+#fontStyle {
+	font: bold 40px "TimeBurner";
+	font-weight: 900;
+	margin-bottom: 27px;
+	color: rgb(235, 235, 235);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+ 
+.navbar .navbar-nav > li > a, .navbar-brand {
+	text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+	line-height: 38px; 
+}
+
+ul>li>a{
+	font-size: 20px;
+}
+
+#navHead{
+	opacity: .8;
+	margin-top: -6px;
+}
+#navHead:hover{
+	opacity: 1;
+}
+
+#navMargin {
+	position: fixed;
+	top: 0;
+	//margin: 0 auto;
+	//z-index: 100;
+	opacity: .8;
+}
+#navMargin:hover {
+	position: fixed;
+	top: 0;
+	//z-index: 100;
+	opacity: 1;
+}
+
+#carusel {
+	margin: 20px auto;
+	opacity: .8;
+	width: 100%;
+	background: rgba(4, 74, 142, 0.79);
+	z-index: -100;
+}
+#carusel:hover {
+	opacity: 1;
+}
+
+#carusel>div>div>div>img{
+	margin: 0 auto;
+}
+
+#content {
+	margin-top: 80px;
+}
+#content1 {
+	
+	border: 1px solid #DF691A;
+	width: 300px;
+	height: 150px;
+	z-index: 100;
+}
+
+#content1>h3, #content1>p, #content2>div{
+	text-align: center;
+}
+
+.imgSize {
+	width: 150px;
+	height: 150px;
+	margin: 30px;
+}
+
+
+#foto>div {
+	display: inline-block;
+}
+
+#dDiv>img{
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+}
+
+#dDiv {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	overflow: hidden;
+	opacity: .77;
+}
+
+/*НАВ МЕНЮ*/
+body {
+          padding-top: 50px;
+          position: relative;
+      }
+      
+      pre {
+          tab-size: 8;
+      }
+      
+      @media screen and (max-width: 768px) {
+          .side-collapse-container{
+              width:100%;
+              position:relative;
+              left:0;
+              transition:left .4s;
+          }
+          .side-collapse-container.out{
+              left:200px;
+          }
+          .side-collapse {
+              top:50px;
+              bottom:0;
+              left:0;
+              width:200px;
+              position:fixed;
+              overflow:hidden;
+              transition:width .4s;
+          }
+          .side-collapse.in {
+              width:0;
+          }
+      }
+
+/*footer*/
+.line {
+	border-bottom: 1px dotted rgba(119, 119, 119, 0.88);
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* 
+#lll {
+	color: white;
+	//text-align: center;
+} */
+
+footer{
+	margin: 20px auto 60px auto;
+	background-color: #045098;
+	width: 1170px;
+	height: 59px;
+	color: #999;
+	clear: both;
+}
+
+#lll{
+	float: left; 
+	margin-left: 2%;
+	color: white;
+	line-height: 56px;
+}
+#ccc{
+	float: left; 
+	margin-left: 30%;
+	color: white;
+	text-align: center; 
+	//margin-right: 7%;
+	line-height: 56px;
+}
+#rrr{
+	float: right; 
+	margin-right: 2%;
+	color: white;
+	line-height: 56px;
+} 
+
+#navHead > div > div.navbar-inverse.side-collapse.in > nav > ul.nav.navbar-nav.navbar-right > li > a{
+	width: 290px;
+	height: 66px;
+	border: 3px solid white;
+	border-radius: 0 0 10px 10px;
+	padding-top: 12px;
+	margin-top: 2px;
+	margin-bottom: 4px;
+}
+	
+#navHead {
+	clear: both;
+}	
+			
+#carousel-example-generic > div > div.item.active > div > h2{
+	color: white;
+}
+#navHead > div > div.navbar-inverse.side-collapse.in > nav > ul:nth-child(1){
+padding-top: 7px;
+}	
+#navHead > div > div.navbar-inverse.side-collapse.in > nav > ul:nth-child(1)
+.navbar-inverse {
+    margin-left: -12px;
+}

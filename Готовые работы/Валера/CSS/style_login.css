@@ -1,0 +1,66 @@
+/*Заголовок и кнопка по центру*/
+#tabl, #tabl2, #tabl3, #tabl4, #tabl5{
+	text-align: center;
+}
+/*Кнопка*/
+#but{
+	font-size: 17px;
+	border-radius: 15px;
+}
+
+/*Фон в таблице*/
+tr{
+	background-color: #E2E4E7;
+}
+
+/*Центруем*/
+body{
+	margin: 0 auto;
+	padding: 0 auto;
+	width: 900px;
+	
+}
+#wrapper{
+	display: block;
+}
+
+#centr{
+	width: 468px;
+	float: left;
+}
+
+#left, #right{
+	float: left;
+}
+
+#bottom1{
+	clear: both;
+}
+
+#logged, #loged, #logout{
+	display: block;
+	text-align: center;
+	padding: 35px;
+}
+/*Блок обертка*/
+#bender{
+	width: 370px;
+    height: auto;
+	margin: 10px 287px;
+	border: 1px solid #CCCCCC;
+	box-shadow: 7px 7px 15px #DBDBDB;
+	background: rgb(206,220,231);
+	background: -moz-linear-gradient(top,  rgba(206,220,231,1) 0%, rgba(89,106,114,1) 100%);
+	background: -webkit-linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%);
+	background: linear-gradient(to bottom,  rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 );
+}
+
+.head {
+	font: 16px 'Supermolot Light';
+	color: rgb(62, 100, 152);
+}
+
+#main {
+    font-size: 0;
+}

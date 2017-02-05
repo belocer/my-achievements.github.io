@@ -1,0 +1,479 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #2980b9;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+section {
+	margin: 20px auto;
+	width: 960px;
+	background: #ecf0f1;
+	height: 1600px;
+	box-shadow: 0 0 10px rgba(26, 26, 26, 0.79);
+	position: relative;
+}
+
+/*****************NAV MENU*****************/
+nav {
+	width: 180px;
+	height: 1600px;
+	background: #34495e;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+#label img{
+	width: 180px;
+	height: 90px;
+	margin-top: -20px;
+	margin-left: 0;
+
+}
+
+nav>ul>li>a {
+	display: inline-block;
+	width: 180px;
+	height: 50px;
+	margin-bottom: 15px;
+	margin-top: 20px;
+	position: relative;
+	line-height:  50px
+}
+
+nav>ul>li>a:hover {
+	background: rgba(43, 58, 72, 0.59);
+}
+
+nav>ul>li {
+	list-style: none;
+}
+
+nav>ul>li>a>span {
+	color: #95a5a6;
+	font: 16px 'Proxima Nova Light';
+	font-weight: 600;
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	left: 46px;
+}
+
+nav>ul>li:nth-child(4) a{
+	background: #243342;
+}
+
+nav>ul>li:nth-child(4) a>span{
+	background: #243342;
+	color: white;
+}
+
+nav>ul>li>a>img {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	margin-top: 9px;
+}
+
+section>div {
+	width: 780px;
+	height: 1300px;
+	overflow: hidden;
+}
+
+/******************ВЫЙТИ******************/
+#goOut {
+	text-align: center;
+	position: absolute;
+	bottom: 25px;
+	left: 35px;
+}
+
+#goOut div {
+	color: white;
+	font: 16px 'Proxima Nova Light';
+}
+
+#goOut a {
+	color: #2ecc71;
+	font: 16px 'Proxima Nova Light';
+}
+
+
+/**********ЗАГОЛОВОК ЗАКАЗЫ**********/
+h1 {
+	overflow: hidden;
+	font: 48px 'Proxima Nova Light';
+	padding-top: 25px;
+	color: #34495e;
+	text-indent: 20px;
+}
+
+/***********Удалить товар***************/
+#currentCategory {
+	height: 40px;
+	width: 600px;
+	float: left;
+	padding-left: 20px;
+	margin: 10px auto;
+}
+
+/************1БЛОК**************/
+#top_part_search{
+	width: 735px;
+	height: 200px;
+	background: white;
+	margin: 10px auto 20px 200px;
+	border: 2px solid #dee1e2;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 50px;
+}
+
+#top_part_search > span:nth-child(2){
+	font: 18px 'Proxima Nova Bold';
+	color: #777;
+}
+
+
+#block1 {
+	width: 735px;
+	height: 580px;
+	background: white;
+	margin: 10px auto 20px 200px;
+	border: 2px solid #dee1e2;
+	border-radius: 3px;
+}
+
+h4 {
+	display: inline-block;
+	font: 14px 'Proxima Nova Bold';
+	color: #95a5a6;
+	padding-top: 15px;
+}
+
+.headBlock {
+	width: 730px;
+	height: 46px;
+	border-bottom: 1px solid #dee1e2;
+	line-height: 46px;
+	overflow: hidden;
+	text-indent: 8px;
+}
+
+#block1 div span {
+	font: 14px 'Proxima Nova Light';
+	color: #999;
+}
+
+#block1 div input[type="text"]{
+	width: 323px;
+	height: 27px;
+	text-indent: 5px;
+	font: 18px 'Proxima Nova Light';
+}
+#block1 div textarea{
+	width: 323px;
+	height: 220px;
+	text-indent: 5px;
+	font: 18px 'Proxima Nova Light';
+}
+
+#price_width{
+	width: 100px;
+}
+
+#productDescription {
+	width: 350px;
+	height: 500px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	overflow: hidden;
+}
+html body section div#block1 div#badge {
+	width: 150px;
+	height: 250px;
+	margin-top: 20px;
+	margin-left: 440px;
+	overflow: hidden;
+}
+
+#category {
+	width: 250px;
+	height: 250px;
+	margin-top: -35px;
+	margin-left: 440px;
+	overflow: hidden;
+}
+
+#category label i {
+	font: 18px 'Proxima Nova Light';
+}
+
+html body section div#block1 div#badge i {
+	display: inline-block;
+	font: 18px 'Proxima Nova Light';
+}
+
+input[type="radio"] {
+	margin-top: 5px;
+	width: 20px;
+	height: 20px;
+}
+
+/*************2БЛОК*************/
+#block2 {
+	width: 735px;
+	height: 300px;
+	background: white;
+	margin: 10px auto 20px 200px;
+	border: 2px solid #dee1e2;
+	border-radius: 3px;
+}
+
+.imgBlock {
+	width: 175px;
+	height: 233px;
+	border: 1px solid transparent;
+	display: inline-block;
+	float: left;
+	margin-left: 6px;
+	overflow: hidden;
+	position: relative;
+}
+
+.imgBlock>img {
+	overflow: hidden;
+	width: 150px;
+	height: 150px;
+	border: .3px solid black;
+	margin-top: 15px;
+	margin-left: 11px;
+}
+
+/*Что бы не было видно инпута по дефолту*/
+.no_decoration
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	text-align:center;
+}
+
+#category > label > span > i{
+	font: 16px 'Supermolot Light';
+	color: black;
+}
+
+div.imgBlock:nth-child(2) > label:nth-child(4),
+div.imgBlock:nth-child(2) > label:nth-child(7),
+div.imgBlock:nth-child(3) > label:nth-child(4),
+div.imgBlock:nth-child(3) > label:nth-child(7),
+div.imgBlock:nth-child(4) > label:nth-child(4),
+div.imgBlock:nth-child(5) > label:nth-child(4)
+ {
+	display: inline-block;
+	width: 175px;
+	height: 25px;
+	text-align: center;
+	font: 16px 'Supermolot Light';
+	margin-top: 3px;
+}
+
+.center_font_change {
+	font: 16px 'Supermolot Light';
+	position: absolute;
+	bottom: 40px;
+	left: 47px;
+	cursor: pointer;
+}
+
+.center_font_delete {
+	font: 16px 'Supermolot Light';
+	position: absolute;
+	bottom: 15px;
+	left: 55px;
+	cursor: pointer;
+}
+
+.center_font_add {
+	font: 16px 'Supermolot Light';
+	position: absolute;
+	bottom: 35px;
+	left: 45px;
+	cursor: pointer;
+}
+
+
+.change{
+	color: #099D48;
+	border-bottom: 1px solid #099D48;
+}
+.delete{
+	color: #B21111;
+	border-bottom: 1px solid #B21111;
+}
+.add{
+	color: #8E44AD;
+	border-bottom: 1px solid #8E44AD;
+}
+
+img[alt="не загружено"]{
+
+}
+
+html body section div#block2 div div.imgBlock img{
+	width: 150px;
+	height: 150px;
+	font: 16px 'Supermolot Light';
+	color: #999;
+	text-align: center;
+	line-height: 150px;
+}
+
+/*************3БЛОК*************/
+#block3 {
+	width: 730px;
+	height: 230px;
+	background: white;
+	margin: 10px auto 20px 200px;
+	border: 2px solid #dee1e2;
+	border-radius: 3px;
+}
+
+#block3 input {
+	width: 323px;
+	height: 27px;
+	text-indent: 5px;
+	font: 18px 'Proxima Nova Light';
+	margin-bottom: 10px;
+}
+
+#bottomInput {
+	width: 450px;
+	height: 300px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+	overflow: hidden;
+}
+
+.delete_variable{
+	color: #ad0000;
+	font: 14px 'Supermolot Light';
+	border-bottom: 1px solid #ad0000;
+}
+
+#remove{
+	width: 100px;
+	height: 25px;
+	position: absolute;
+	right: 80px;
+	top: 1500px;
+}
+
+#remove>input{
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	font: 18px 'Supermolot Light';
+	color: #ad0000;
+	background: #ECF0F1;
+	border: 1px solid #ECF0F1;
+	border-bottom: 1px solid #ad0000;
+}
+
+#save{
+	text-align: center;
+	overflow: hidden;
+	clear: both;
+	width: 250px;
+	height: 35px;
+	position: absolute;
+	left: 190px;
+	top: 1500px;
+}
+
+#save>input{
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	font: 18px 'Supermolot Light';
+	color: #02873a;
+	background: #ECF0F1;
+	border: 1px solid #ECF0F1;
+	border-bottom: 1px solid #02873a;
+}
+
+#update{
+	text-align: center;
+	overflow: hidden;
+	clear: both;
+	width: 250px;
+	height: 35px;
+	position: absolute;
+	left: 470px;
+	top: 1500px;
+}
+
+#update>input{
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	font: 18px 'Supermolot Light';
+	color: #183552;
+	background: #ECF0F1;
+	border: 1px solid #ECF0F1;
+	border-bottom: 1px solid #183552;
+}
+
+/*под скрипт*/
+.qwe1 {
+	display: none;
+}
+
+.active_check1 {
+	background-image: url(../image/active.png);
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.passive_check1 {
+	background-image: url(../image/passive.png);
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.qwe {
+	display: none;
+}
+
+.active_check {
+	background-image: url(../image/active.png);
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+
+.passive_check {
+	background-image: url(../image/passive.png);
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+

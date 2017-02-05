@@ -1,0 +1,36 @@
+html, body{
+	margin: 20px 0 0 0;
+	background: #232323;
+	color: #fff;
+}
+
+section {
+}
+
+.wrapper {
+	max-width: 1280px;
+	padding: 0 15px;
+	margin: 0 auto;
+	border: 1px solid #ff0;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+
+.wrapper .col {
+	border: 1px solid #fff;
+	width: 8.3333%;
+	min-height: 400px;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.wrapper .col div {
+	background: #777;
+	min-height: inherit;
+}
+

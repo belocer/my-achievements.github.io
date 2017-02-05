@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 6</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<script type="text/javascript">
+	window.onload = function () {
+		
+		var myImage = document.getElementById("pup");
+		var imageArray = ["images/3.jpg", "images/4.jpg", "images/5.jpg", "images/6.jpg", "images/7.jpg"];
+		var imageIndex = 0;
+		function changeImage () {
+			myImage.setAttribute("src",imageArray[imageIndex]);
+			imageIndex++;
+			if(imageIndex >= imageArray.length) {
+			imageIndex = 0;
+			}
+		}
+		setInterval(changeImage,5000);
+	}		
+</script>
+
+
+<br>
+<br>
+<br>
+	<table class="inflate">
+		<tr>
+			<td><input type=button value="ЖМИ" onClick="document.getElementById('push1').style.display='block';"></td>
+			<td><input type=button value="ЖМИ" onClick="document.getElementById('push2').style.display='block';"></td>
+			<td><input type=button value="ЖМИ" onClick="document.getElementById('push3').style.display='block';"></td>
+		</tr>                             
+		<tr>                              
+			<td><input type=button value="ЖМИ" onClick="document.getElementById('push4').style.display='block';"></td>
+			<td><input type=button value="ЖМИ" onClick="document.getElementById('push5').style.display='block';"></td>
+			<td><input type=button value="ЖМИ" onClick="document.getElementById('push6').style.display='block';"></td>
+		</tr>                             
+		<tr>                              
+			<td><input type=button value="ЖМИ" onClick="document.getElementById('push7').style.display='block';"></td>
+			<td><input type=button value="ЖМИ" onClick="document.getElementById('push8').style.display='block';"></td>
+			<td><input type=button value="ЖМИ" onClick="document.getElementById('push9').style.display='block';"></td>
+		</tr>
+	</table>
+<br>
+<br>
+<br>	
+	<table id="grid">
+		<tr>
+			<td><img id="push1" src="images/1.png" onClick="this.style.display='none';"></td>
+			<td><img id="push2" src="images/1.png" onClick="this.style.display='none';"></td>
+			<td><img id="push3" src="images/1.png" onClick="this.style.display='none';"></td>
+		</tr>
+		<tr>
+			<td><img id="push4" src="images/1.png" onClick="this.style.display='none';"></td>
+			<td><img id="push5" src="images/1.png" onClick="this.style.display='none';"></td>
+			<td><img id="push6" src="images/1.png" onClick="this.style.display='none';"></td>
+		</tr>
+		<tr>
+			<td><img id="push7" src="images/1.png" onClick="this.style.display='none';"></td>
+			<td><img id="push8" src="images/1.png" onClick="this.style.display='none';"></td>
+			<td><img id="push9" src="images/1.png" onClick="this.style.display='none';"></td>
+		</tr>
+	</table>
+<br>
+<br>
+<br>
+	<div id="wrt">
+	<img id="pup" src="images/1.png" alt="ghghghgh"></div>
+	
+<br>
+<br>
+<br>	
+<a href="#">eeeeee</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

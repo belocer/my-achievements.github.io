@@ -1,0 +1,66 @@
+.nav,
+.boxes,
+.footer,
+.footer form {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.nav {
+	justify-content: space-between;
+}
+
+.nav a {
+	width: 23%;
+}
+
+.boxes div {
+	flex: 1 1 250px;
+	margin: 10px;
+	border-radius: 5px;
+	padding: 10px 10px 0 10px;
+	background-color: rgba(0, 0, 0, .1);
+	display: flex;
+	flex-flow: column;
+}
+
+.boxes .more {
+	margin-top: auto;
+}
+
+.footer .copyright {
+	flex: 2 1 500px;
+	margin-right: 30px;
+}
+
+.footer .signup {
+	flex: 1 1 250px;
+}
+
+.signup label {
+	width: 100%;
+}
+
+.signup input[type="email"] {
+	border-radius: 4px 0 0 4px;
+	flex: 1;
+}
+
+.signup input[type="submit"] {
+	border-radius: 0 4px 4px 0;
+	padding: 0 10px;
+}
+
+/*Мобильная раскладка*/
+/*вступает в силу, если ширина окна браузера (или разрешение по горизонта-
+ли на экране устройства) не превышает 500 пикселов.*/
+
+@media (max-width: 500px) {
+	.nav {
+		flex-flow: column;
+	}
+	.nav a {
+		width: 100%;
+		margin-bottom: 2px;
+	}
+}

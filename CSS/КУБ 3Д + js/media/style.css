@@ -1,0 +1,118 @@
+body{
+	background: url(http://subtlepatterns.com/patterns/light_noise_diagonal.png);
+	font: 1em 'PT Sans', Tahoma, Arial;
+}
+
+#wrapper{
+	margin: 80px;
+	
+	perspective: 900px;
+	-o-perspective: 900px;
+	-ms-perspective: 900px;
+	-moz-perspective: 900px;
+	-webkit-perspective: 900px;
+}
+
+#cube {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	
+	transform-origin: 50% 50% -150px;
+	-o-transform-origin: 50% 50% -150px;
+	-ms-transform-origin: 50% 50% -150px;
+	-moz-transform-origin: 50% 50% -150px;
+	-webkit-transform-origin: 50% 50% -150px;
+	
+	/*transform: rotate3d(1,1,1,50deg);
+	-o-transform: rotate3d(1,1,1,50deg);
+	-ms-transform: rotate3d(1,1,1,50deg);
+	-moz-transform: rotate3d(1,1,1,50deg);
+	-webkit-transform: rotate3d(1,1,1,180deg);*/
+	
+	transform-style: preserve-3d;;
+	-o-transform-style: preserve-3d;;
+	-ms-transform-style: preserve-3d;;
+	-moz-transform-style: preserve-3d;;
+	-webkit-transform-style: preserve-3d;;
+}
+
+.side {
+	width: 300px;
+	height: 300px;
+	background: rgba(0,0,0,.3);
+	
+	background: radial-gradient(rgba(0,0,0,.1),rgba(0,0,0,.5));
+	background: -o-radial-gradient(rgba(0,0,0,.1),rgba(0,0,0,.5));
+	background: -ms-radial-gradient(rgba(0,0,0,.1),rgba(0,0,0,.5));
+	background: -moz-radial-gradient(rgba(0,0,0,.1),rgba(0,0,0,.5));
+	background: -webkit-radial-gradient(rgba(0,0,0,.1),rgba(0,0,0,.5));
+	
+	position: absolute;
+	border: 10px solid #fff;
+	border-radius: 10px;
+	font-size: 5em;
+	color: #fff;
+	line-height: 300px;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.4);
+	box-shadow: 0 0 6px rgba(0,0,0,.5);
+	
+	transform-origin: 50% 50% -150px;
+	-o-transform-origin: 50% 50% -150px;
+	-ms-transform-origin: 50% 50% -150px;
+	-moz-transform-origin: 50% 50% -150px;
+	-webkit-transform-origin: 50% 50% -150px;
+	
+	
+	/** Что бы не видно было задней стороны элемента! **/
+	/*backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;*/
+}
+
+#side2 {
+	transform: rotateY(90deg);
+	-o-transform: rotateY(90deg);
+	-ms-transform: rotateY(90deg);
+	-moz-transform: rotateY(90deg);
+	-webkit-transform: rotateY(90deg);
+}
+#side3 {
+	transform: rotateY(-90deg);
+	-o-transform: rotateY(-90deg);
+	-ms-transform: rotateY(-90deg);
+	-moz-transform: rotateY(-90deg);
+	-webkit-transform: rotateY(-90deg);
+}
+#side4 {
+	transform: rotateX(90deg);
+	-o-transform: rotateX(90deg);
+	-ms-transform: rotateX(90deg);
+	-moz-transform: rotateX(90deg);
+	-webkit-transform: rotateX(90deg);
+}
+#side5 {
+	transform: rotateX(-90deg);
+	-o-transform: rotateX(-90deg);
+	-ms-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	-webkit-transform: rotateX(-90deg);
+}
+#side6 {
+	transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+

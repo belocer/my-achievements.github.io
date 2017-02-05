@@ -1,0 +1,73 @@
+.nav {
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	li {
+		width: 30%;
+		background-color: #FFEED5;
+		padding: 5px;
+		text-align: center;
+	}
+	li a {
+		text-decoration: none;
+		&:hover {
+		text-decoration: underline;
+		}
+	}
+}
+
+/*Расширение с селекторами-заполнителями*/
+h1 {
+	transition: background-color 3s, color 2s;
+	color: green;
+	width: 100px;
+	@extend %headline;
+}
+%headline {
+	background: grey;
+}
+
+b {
+	@extend %headline;
+	font-size: 24px;
+	display: inline-block;
+}
+
+
+/*Миксины*/
+@mixin rotate($deg) {
+	transform: rotate(#{$deg}deg);
+/*Эта техника называется интерполяцией, и смысл ее заключа-
+ется в фразе: «Эй, Sass, вот переменная; используй ее значение».*/
+}
+
+@mixin translate($mm) {
+	transform: translateY(#{$mm}px);
+}
+
+div > img {
+	width: 100px;
+}
+
+h1 {
+@include rotate(-3);
+}
+div {
+@include rotate(70);
+@include translate(100);
+}
+
+
+/*Медиа запросы в SASS*/
+h1 {
+	font-size: 2em;
+	@media (min-width: 1200px) {
+		font-size: 3em;
+	}
+}
+
+/*конец*/
+/*класс для тогла*/
+.abc2 {
+	color: black;
+} 

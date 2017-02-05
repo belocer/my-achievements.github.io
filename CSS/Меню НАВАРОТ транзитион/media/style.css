@@ -1,0 +1,112 @@
+body{
+	background: url(http://subtlepatterns.com/patterns/subtlenet2.png);
+	font: 1em 'PT Sans', Tahoma, Arial;
+	text-transform: uppercase;
+}
+
+/***************Гланое меню**************/
+.nav{
+	list-style: none;
+	padding: 0;
+	margin: 30px;
+	width: 50px;
+	opacity: .5;
+	
+	transition: opacity .3s ease-in-out;
+	-o-transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+	-webkit-transition: opacity .3s ease-in-out;
+}
+
+.nav:hover{
+	opacity: 1;
+}
+
+.nav li{
+	height: 50px;
+	width: 50px;
+	overflow: hidden;
+	
+	transition: width .2s ease-in-out, height .2s;
+	-o-transition: width .2s ease-in-out, height .2s;
+	-moz-transition: width .2s ease-in-out, height .2s;
+	-webkit-transition: width .2s ease-in-out, height .2s;
+	
+}
+
+.nav li:hover{
+	width: 200px;
+	height: 175px;
+}
+
+.nav li a {
+	display: block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	background: #bbb;
+	margin: 1px;
+	color: #fff;
+	padding-left: 15px;
+	cursor: pointer;
+	
+	/*
+	transition-property: all;
+	transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+	
+	-o-transition-property: all;
+	-o-transition-duration: .2s;
+	-o-transition-timing-function: ease-in-out;
+		
+	-moz-transition-property: all;
+	-moz-transition-duration: .2s;
+	-moz-transition-timing-function: ease-in-out;
+		
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .2s;
+	-webkit-transition-timing-function: ease-in-out;
+	*****Упрощенная запись******/
+	
+	transition: background .2s ease-in-out;
+	-o-transition: background .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out;
+	-webkit-transition: background .2s ease-in-out;
+}
+
+.nav li a:hover {
+	background: #2fc5ff;
+}
+
+.nav li a:first-child {
+	font-size: 1.1em;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	text-indent: 36px;
+}
+
+.nav li a:first-child::before {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 32px;
+	width: 32px;
+	top: 9px;
+	left: 9px;
+}
+
+.main-menu a:first-child::before{
+	background: url('http://www.defaulticon.com/images/icons32x32/home.png?itok=4tougUBV');
+}
+
+.settings a:first-child::before{
+	background: url('http://www.defaulticon.com/images/icons32x32/settings.png?itok=f3WwNrKf');
+}
+
+.link a:first-child::before{
+	background: url('http://www.defaulticon.com/images/icons32x32/link.png?itok=ZWITPB3E');
+}
+.search a:first-child::before{
+	background: url('http://www.defaulticon.com/images/icons32x32/search_0.png?itok=eqsHkE5C');
+}

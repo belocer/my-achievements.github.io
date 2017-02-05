@@ -1,0 +1,204 @@
+@font-face {
+font-family: 'Supermolot';
+src: url('../fonts/Supermolot/Supermolot.eot');
+src: local('Supermolot'), url('../fonts/Supermolot/Supermolot.woff') format('woff'), url('../fonts/Supermolot/Supermolot.ttf') format('truetype'), url('../fonts/Supermolot/Supermolot.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Supermolot Light';
+src: url('../fonts/Supermolot-Light/Supermolot-Light.eot');
+src: local('Supermolot Light'), url('../fonts/Supermolot-Light/Supermolot-Light.woff') format('woff'), url('../fonts/Supermolot-Light/Supermolot-Light.ttf') format('truetype'), url('../fonts/Supermolot-Light/Supermolot-Light.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Supermolot Bold';
+src: url('../fonts/Supermolot-Bold/Supermolot-Bold.eot');
+src: local('Supermolot Bold'), url('../fonts/Supermolot-Bold/Supermolot-Bold.woff') format('woff'), url('../fonts/Supermolot-Bold/Supermolot-Bold.ttf') format('truetype'), url('../fonts/Supermolot-Bold/Supermolot-Bold.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Supermolot Light Italic';
+src: url('../fonts/Supermolot-Light-Italic/Supermolot-Light-Italic.eot');
+src: local('Supermolot Light Italic'), url('../fonts/Supermolot-Light-Italic/Supermolot-Light-Italic.woff') format('woff'), url('../fonts/Supermolot-Light-Italic/Supermolot-Light-Italic.ttf') format('truetype'), url('../fonts/Supermolot-Light-Italic/Supermolot-Light-Italic.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Supermolot Italic';
+src: url('../fonts/Supermolot-Italic/Supermolot-Italic.eot');
+src: local('Supermolot Italic'), url('../fonts/Supermolot-Italic/Supermolot-Italic.woff') format('woff'), url('../fonts/Supermolot-Italic/Supermolot-Italic.ttf') format('truetype'), url('../fonts/Supermolot-Italic/Supermolot-Italic.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+h1, div{
+	text-align: center;
+	font: 20px 'Supermolot';
+	color: #9F9F9B;
+}
+
+/*footer*/
+.line {
+	border-bottom: 1px dotted rgba(119, 119, 119, 0.88);
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+address {
+	text-align: center;
+	font: 16px 'Supermolot Light Italic';
+}
+
+.msk {
+	font: 15px 'Supermolot Italic';
+	color: white;
+}
+
+input['placeholder']{
+	color: red;
+}
+
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: -100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    right: 1px;
+    z-index: 10;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+
+
+#content {
+	position: absolute;
+	top: 10px;
+	z-index: 15;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 5%;
+}
+
+
+
+/* Custom button
+-------------------------------------------------- */
+
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #007da7;
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-ttc {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #007DA7 100%);
+  ...
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-ttc:hover {
+  background-position: 0 -15px;
+}
+
+#result {
+	color: #831412;
+}
+
+#datepicker {
+	color: black;
+	text-align: center;
+}
+
+#content > form > input[type="text"]:nth-child(6) {
+	color: black;
+	text-align: center;
+}
+
+#content > form > input[type="text"]:nth-child(10) {
+	color: black;
+	text-align: center;
+}
+
+#content > form > input[type="text"]:nth-child(14) {
+	color: black;
+	text-align: center;
+}
+
+#content > form > input[type="text"]:nth-child(18) {
+	color: black;
+	text-align: center;
+}
+
+#msk {
+	position: fixed;
+	top: 25px;
+	right: 25px;
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	background-color: #9FA6AE;
+}
+
+#msk span{
+	color: #E3EAF2;
+	font-size: 24px;
+	padding-top: -20px;
+}
+
+#time h4{
+	color: #E3EAF2;
+	font-size: 30px;	
+}
+
+
+
+
+
+

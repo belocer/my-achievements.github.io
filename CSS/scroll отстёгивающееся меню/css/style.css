@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css?family=Anton|Passion+One:700");
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+* {
+  font-family: 'Arsenal', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.inplace {
+  height: 70px;
+  background-color: #6D2A85;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0 0 7px 7px;
+  margin-bottom: 30px;
+  -webkit-transition: position, height, background-color  .5s;
+          transition: position, height, background-color  .5s;
+}
+
+.opacit {
+  height: 50px;
+  background-color: rgba(0, 18, 255, 0.5);
+  position: fixed;
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 0 0 7px 7px;
+  -webkit-transition: position, height, background-color  .5s;
+          transition: position, height, background-color  .5s;
+}
+.opacit ul li {
+  line-height: 50px;
+}
+
+ul {
+  margin-top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  width: 20%;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+}
+
+li:hover {
+  background: #501F62;
+  border-radius: 0 0 7px 7px;
+}
+
+/*h1 {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 150px;
+  padding: 10px;
+  font-family: 'Passion One', cursive;
+  width: 520px;
+  height: 155px;
+  border: 20px solid transparent;
+  background-clip: border-box;
+  background-image: url(../1.png);
+  background-repeat: no-repeat;
+}*/
+
+.rightfloat {
+  float: right;
+}
+
+img {
+  float: left;
+  clear: both;
+  width: 180px;
+  border-radius: 7px;
+  margin: 15px;
+}
+
+footer {
+  margin-top: 30px;
+  clear: both;
+  width: 100%;
+  max-width: 1200px;
+  height: 100px;
+  background: gray;
+  overflow: hidden;
+  border-radius: 7px 7px 0 0;
+}
+
+footer > p {
+  padding: 10px;
+}
+
+/* 
+  Based from this article from Divya Manian - 
+  http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+  position: relative;
+  margin: 0 auto 1em;
+  padding: 1em 1em .25em 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title:after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 240px;
+  height: 4px;
+  margin-left: -120px;
+  content: '';
+  background-color: #fff;
+}
+
+/* Clip text element */
+.clip-text {
+    font-size: 8em;
+    font-weight: bold;
+    /* line-height: 61px; */
+    position: relative;
+    display: inline-block;
+    /* margin: .25em; */
+    /* padding: .5em .75em; */
+    text-align: center;
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1 {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 150px;
+    padding: 10px;
+    font-family: 'Passion One', cursive;
+    width: 550px;
+    height: 194px;
+    border: 20px solid transparent;
+    background-clip: border-box;
+    background-image: url(../1.png);
+    background-repeat: no-repeat;
+}
+
+.clip-text:before,
+.clip-text:after {
+  position: absolute;
+  content: '';
+}
+
+/* Background */
+.clip-text:before {
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+  position: absolute;
+  z-index: -1;
+  top: .125em;
+  right: .125em;
+  bottom: .125em;
+  left: .125em;
+  background-color: #000;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+  background-position: -.65em 0;
+}
+
+.clip-text--no-textzone:after {
+  content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+  background-repeat: no-repeat;
+  background-size: cover;
+}

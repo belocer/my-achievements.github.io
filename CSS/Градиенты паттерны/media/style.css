@@ -1,0 +1,105 @@
+body{
+	background: url(http://subtlepatterns.com/patterns/subtlenet2.png);
+	font: 1em 'PT Sans', Tahoma, Arial;
+	text-transform: uppercase;
+}
+
+.container {
+	width: 400px;
+	height: 300px;
+	float: left;
+	margin: 40px;
+	background: #999;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	
+	border-radius: 5px;
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+	
+	/*background: linear-gradient(45deg,#333, #bbb);
+	background: -o-linear-gradient(45deg,#333, #bbb);
+	background: -moz-linear-gradient(45deg,#333, #bbb);
+	background: -webkit-linear-gradient(45deg,#333, #bbb);*/
+	
+	/******Из центра круговой градиент******
+	background: radial-gradient(center,#333, #bbb);
+	background: -o-radial-gradient(center,#333, #bbb);
+	background: -moz-radial-gradient(center,#333, #bbb);
+	background: -webkit-radial-gradient(center,#333, #bbb);
+	*/
+}
+
+.container::after{
+	content: '';
+	width: 400px;
+	height: 300px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	transition: opacity .5s;
+	-o-transition: opacity .5s;
+	-ms-transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-webkit-transition: opacity .5s;
+	
+	
+	/* ** *** Градиент с сайта 'http://lea.verou.me/css3patterns/' *** ** */
+/*background-color:black;
+background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;*/
+	
+background-color: hsl(34, 53%, 82%);
+background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,                  
+  hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+  hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,                
+  hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+  hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+  hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px       
+  ),
+repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px, 
+  hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+  hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,                
+  hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+  hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+  hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px       
+);	
+	
+	/*background: radial-gradient(transparent, rgba(0,0,0,.7));
+	background: -o-radial-gradient(transparent, rgba(0,0,0,.7));
+	background: -ms-radial-gradient(transparent, rgba(0,0,0,.7));
+	background: -moz-radial-gradient(transparent, rgba(0,0,0,.7));
+	background: -webkit-radial-gradient(transparent, rgba(0,0,0,.7));*/
+}
+
+.container:hover::after{
+	opacity: 0;
+}
+
+/*.container:hover {
+	width: 400px;
+	height: 300px;
+	float: left;
+	margin: 40px;
+	background: #999;
+	
+	border-radius: 5px;
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+	
+	background: linear-gradient(45deg,#000, #fff);
+	background: -o-linear-gradient(45deg,#000, #fff);
+	background: -moz-linear-gradient(45deg,#000, #fff);
+	background: -webkit-linear-gradient(45deg,#000, #fff);
+	
+	background: radial-gradient(45deg,#000, #fff);
+	background: -o-radial-gradient(45deg,#000, #fff);
+	background: -moz-radial-gradient(45deg,#000, #fff);
+	background: -webkit-radial-gradient(45deg,#000, #fff);
+}*/

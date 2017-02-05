@@ -1,0 +1,49 @@
+body{
+background-image: url(images/2.png);
+	margin: 0 auto;
+	padding: 0 auto;
+}
+table{
+	border: 5px solid #FFB2AC;
+	width: 350px;
+	height: 312px;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+table td{
+	border: 3px solid #FF9532;
+	width: 100px;
+	height: 105px;
+}
+
+table:hover{
+	box-shadow: 10px 10px 20px #FF370F;
+}
+
+input{
+	height: 100px;
+	width: 100px;
+	background-color: #8EFF7D;
+	font-size: 20px;
+}
+
+.inflate td:hover {
+	box-shadow: 5px 5px 15px white;
+	animation: anim 0.5s;
+}
+
+@keyframes anim {
+	0%	 {transform: scale(0deg);}	
+	50%  {transform: scale(1.2,1.0);} 
+	100% {transform: scale(0deg);}
+}
+
+div{
+	border: 5px solid #FFB200;
+	background-color: #E5FA8B;
+	box-shadow: 10px 10px 20px #31FF8D;
+	margin: 30px;
+	padding: 20px;
+}
+

@@ -1,0 +1,27 @@
+body{
+	transform-style: preserve-3d;
+	perspective: 400px;
+}
+
+
+.test{
+	width: 100px;
+	height: 100px;
+	background: #ff0;
+	border: 2px solid #00f;
+	opacity: 0.8;
+	transition: all .5s;
+	position: absolute;
+	left: 30px;
+	top: 1030px;
+	animation: backmove 2s infinite cubic-bezier(.36, -0.62, .53, 1.63) paused;
+}
+
+.test.animated{
+	animation-play-state: running;
+}
+
+@keyframes backmove{
+	0%, 100% {left: 30px; background: #ff0;}
+	50% {left: 500px; background: #0f0;}
+}

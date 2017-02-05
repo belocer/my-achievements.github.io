@@ -1,0 +1,28 @@
+html, body{
+	margin: 20px 0 0 0;
+	background: #232323;
+	color: #fff;
+}
+
+
+.wrapper {
+	max-width: 1280px;
+	padding: 0 15px;
+	margin: 0 auto;
+	border: 1px solid #ff0;
+}
+
+.row {
+	display: flex;	 // Заставляет стоять блоки друг рядом с другом
+	flex-wrap: wrap; // Заставляет стоять блоки друг рядом с другом
+	margin: 0 -15px;
+}
+
+.wrapper .col {
+	min-height: 400px;
+	box-sizing: border-box;
+	text-align: center;
+	background: #777;
+	width: calc(8.33% - 30px);
+	margin: 15px;
+}

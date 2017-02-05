@@ -1,0 +1,216 @@
+* {
+	margin: 0;
+	padding: 0;
+	transition: all .6s;
+}
+
+body {
+	background: url(http://subtlepatterns.com/patterns/grid.png);
+	font: 1em 'PT Sans', Helvetica, Tahoma, Arial, sans-serif;
+	color: #333;
+}
+
+h1{
+	text-align: center;
+}
+
+.block{
+	width: 900px;
+	margin: auto;
+}
+
+#abc1 {
+	height: 53px;
+	width: 750px;
+}
+
+#abc li {
+	list-style: none;
+	display: inline-block;
+	width: 95px;
+	height: 58px;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+#abc li a {
+	text-align: center;
+	text-decoration: none;
+	float: left;
+	font-size: 20px;
+	font-family: verbana, arial;
+	padding: 15px;
+	padding-left: 16px;
+	background-color: rgba(255, 255, 255, 0.45);
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.33);
+	font-weight: 800;
+	color: #717171;
+	text-transform: uppercase;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+	width: 120px;
+	border-radius: 10px;
+	margin-left: 10px;
+}
+
+#abc li a:hover {
+	background-color: rgba(115, 115, 167, 0.45);
+	box-shadow: 6px 6px 10px rgba(45, 177, 111, 0.9), 
+		inset 3px 3px 10px rgba(64, 178, 121, 0.81);
+	
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+	
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	
+	transition: all .3s;
+	color: rgba(19, 136, 87, 0.95);
+	background-color: rgba(13, 157, 90, 0.84);
+	color: transparent;
+	text-shadow: 0 2px 3px rgba(255, 255, 255, 0.5);
+	
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-ms-background-clip: text;
+	background-clip: text;
+	
+	border-top: 1px solid rgba(45, 177, 111, 0.9);
+	border-right: 4px solid rgba(45, 177, 111, 0.9);
+	border-left: 4px solid rgba(45, 177, 111, 0.9);
+	border-bottom: 4px solid rgba(45, 177, 111, 0.9);
+	border-radius: 2px 30px;
+}
+
+p{
+	margin: 10px;
+	margin-top: 30px;
+	text-indent: 30px;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+}
+
+p:first-letter{
+	font-size: 130%;
+	color: rgba(67, 152, 29, 0.9);
+}
+
+.lorempix img {
+	box-shadow: 5px 5px 7px #000, inset 10px 10px 15px #000;
+	margin: 20px;
+	float: left;
+}
+
+.lorempix>img:hover{
+	width: 225px;
+	height: 115px;
+}
+
+@media only screen and (max-width: 950px){  
+	/* Когда ширина окна становится меньше 950px тогда меняем ширину и бэкграунд 600px и #24476c*/
+	.block{
+	width: 650px;
+	margin: auto;
+	background: rgba(184, 184, 184, 0.38);
+}	
+	
+	#abc li {
+	list-style: none;
+	display: inline-block;
+	width: 110px;
+	height: 58px;
+	margin-right: 35px;
+	margin-left: 5px;
+}
+}
+
+
+@media only screen and (max-width:600px){  
+	/* Когда ширина окна становится меньше 950px тогда меняем ширину и бэкграунд 600px и #24476c*/
+	.block{
+	width: 300px;
+	margin: auto;
+	background: rgba(145, 137, 137, 0.33);
+}	
+	
+	#abc li {
+	list-style: none;
+	display: block;
+	margin-top: 3px;
+	}
+	
+	p{
+	clear: both;
+	padding-top: 20px; 	
+	}
+	
+	#abc li a {
+		width: 235px;
+		height: 20px;
+	}
+	
+}
+
+
+#but, #but1{
+	font-family: Helvetica, "pt-sans", Tahoma, Arial;
+	font-weight: 700;
+	font-size: 24px;
+	color: #555555;
+	text-shadow: 0 1px 0 white, -1px -1px 2px rgba(175, 158, 158, 0.6);
+	width: 120px;
+	height: 35px;
+	border-radius: 15px;
+	box-shadow: 2px 2px 5px rgba(74, 74, 74, 0.8);
+}
+
+#but:active{
+	box-shadow: inset 2px 2px 3px rgba(74, 74, 74, 0.8),
+		inset -1px -1px 3px rgba(74, 74, 74, 0.8);
+}
+
+#but1:active{
+	box-shadow: inset 2px 2px 3px rgba(74, 74, 74, 0.8),
+		inset -1px -1px 3px rgba(74, 74, 74, 0.8);
+}
+
+#mainImage{
+	border: 10px double #7e7edb;
+	box-shadow: 3px 3px 10px #000, inset 10px 10px 10px #000;
+	border-radius: 50%;
+}
+
+#mainImage:hover{
+	border: 10px inset #5353ff;
+	box-shadow: -3px -3px 5px #6a6a6a, inset 3px 3px 5px #000000;
+	border-radius: 50%;
+}
+
+#mainImage:active{
+	border: 10px inset rgba(227, 227, 227, 0.84);
+	box-shadow: px 3px 5px #0d0d0d, inset 3px 3px 5px #000000;
+	border-radius: 1px;
+}
+
+.example{
+	color: #fff;
+	font-size: 1.4em;
+	text-align: right;
+}
+
+#join{
+	width: 250px;
+	padding: 10px;
+	background-color: bisque;
+	border: 3px solid #967854;
+	border-radius: 7px;
+	box-shadow: 7px 7px 11px;
+}
+
+
+
+
+

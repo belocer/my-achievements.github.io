@@ -1,0 +1,4 @@
+RewriteEngine on
+ErrorDocument 404 /
+RewriteRule ^file/([^/]+)/([^/]+)/([^/]+)$ index.php?&date=$1&rand=$2&o=$3
+
