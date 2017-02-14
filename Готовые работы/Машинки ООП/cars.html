@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Cars</title>
+	<title>Cars ООП</title>
 </head>
 <body>
-	
+	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+	<script>
+	// Создаю Конструктор Car
+		var Car = function ( x, y ) {
+			this.x = x;
+			this.y = y;
+		};
+// Использую конструктор
+//var tesla = new Car(10, 20);
+
+var drawCar = function (car) {
+	var carHtml = '<img src="car.png">';
+	var carElement = $(carHtml);
+
+	carElement.css({
+		position: "absolute",
+		left: car.x,
+		top: car.y
+	});
+
+	$("body").append(carElement);
+};
+
+// Создадим две машины
+var tesla = new Car(20, 20);
+var nissan = new Car(100, 200);
+var wolkswagen = new Car(500, 50);
+drawCar(wolkswagen);
+drawCar(tesla);
+drawCar(nissan);
+
+ 
+	</script>
+
 </body>
 </html>

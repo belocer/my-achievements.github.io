@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #317100; z-index: -100;">
+<head>
+	<meta charset="UTF-8">
+	<title>Cars ООП Prototype</title>
+</head>
+<body style="background-image: url(img/Background.jpg); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; z-index: 100;">
+<div>Жми педаль что бы двигаться к финишу<br>
+	<button onclick="goCar();"> педаль </button>
+</div>
+<div>
+	<button id="startGame" onclick="startGame();">Начать гонку</button>
+</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+
+
+	// Создаю Конструктор Car
+		var Car = function (x, y, speed) {
+			this.x = x;
+			this.y = y;
+			this.speed = speed;
+		};
+
+
+// Функция -- Прототип
+Car.prototype.draw = function () {
+
+	var carHtml = '<img src="car.png">';
+
+	this.carElement = $(carHtml);
+
+	this.carElement.css({
+		position: "absolute",
+		left: this.x,
+		top: this.y
+	});
+
+	$("body").append(this.carElement);
+};
+
+
+// Двигаем авто вправо
+Car.prototype.moveRight = function () {
+
+	this.x += this.speed;
+
+	this.carElement.css({
+		left: this.x,
+		top: this.y
+	});
+
+	if(this.x >= 800){
+		clearInterval(this.name);
+		this.x = 800;
+		stop;
+	};
+};
+
+// влево
+Car.prototype.moveLeft = function () {
+	this.x -= this.speed;
+	this.carElement.css({
+		left: this.x,
+		top: this.y
+	});
+};
+
+// вверх
+Car.prototype.moveUp = function () {
+	this.y -= this.speed;
+	this.carElement.css({
+		left: this.x,
+		top: this.y
+	});
+};
+
+// вниз
+Car.prototype.moveDown = function () {
+	this.y += this.speed;
+	this.carElement.css({
+		left: this.x,
+		top: this.y
+	});
+};
+
+// Создадим три машины используя конструктор Car
+var tesla = new Car(20, 100, 60);
+var nissan = new Car(20, 200, 25);
+var volkswagen = new Car(20, 300, 20);
+
+
+// Использую функцию прототип ( Код рисования "draw" теперь является частью объекта ) для отрисовки
+volkswagen.draw();
+tesla.draw();
+nissan.draw();
+
+// Для движения авто
+function goCar () {
+	tesla.moveRight();
+};
+// Выводимые сообщения о начале старта
+function goCar1(){
+	$("output").html("<h3 style='color: red;'>На старт...</h3>");
+}
+
+function goCar2(){
+	$("output").html("<h2 style='color: orange;'>Внимание...</h2>");
+}
+
+function goCar3(){
+	$("output").html("<h1 style='color: green;'>Марш!!!</h1>");
+
+	var i = setInterval(startCar, 80);
+	return i;
+}
+
+// Машины ПК начинают движение
+function startCar(){
+	setInterval(nissan.moveRight(), 50);
+	setInterval(volkswagen.moveRight(), 60);
+}
+
+// Начать игру
+function startGame(){
+	setTimeout(goCar1, 1000);
+	setTimeout(goCar2, 2000);
+	setTimeout(goCar3, 3000);
+}
+	</script>
+<output></output>
+</body>
+</html>
