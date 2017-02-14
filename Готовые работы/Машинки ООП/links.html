@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Цикл</title>
+</head>
+<body>
+
+	<script>
+		var x = 1;
+		while ( x < 10000 ) {
+			 x = x * 3
+			console.log(x);
+		}
+	</script>
+	
+	
+	<script> /* Добавляем к слову */
+	
+	// 	var animals = ["Кот", "Рыба", "Лемур", "Комодский варан"];
+		
+	// for ( var i = 0; i < animals.length; i++ ) {
+	// 	animals[i] += " - прекрасное животное";
+	// 	console.log(animals);
+	// }
+	</script>
+
+	
+
+	<div id="res"></div>
+	<hr>
+	<input type="text" id="words"><br>
+	<button id="but" onClick="hack();">кнопка</button><br>
+	<button id="but" onClick="generateRandomInsult();">кнопка 2</button><br>
+	<div id="hackName"></div>
+	
+	
+	
+	<script> /* Генератор строк */
+	
+		var alphabet = "абвгдеёжзиклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЬЭЮЯ";
+		var result = "";
+		for ( var i = 10; i > result.length; i-- ) {
+			result += alphabet[Math.floor( Math.random()*alphabet.length )];
+			document.getElementById( 'res' ).innerHTML += result;
+		}
+	</script>
+	
+	
+	<script> /* Хакерский язык */
+		function hack(){ 
+			
+			var words = document.getElementById("words").value;
+			var v = "";
+						
+			 for ( var i = 0; words.length > i; i++ ){
+						 
+				 if ( words[i] === "a" ) {
+					 document.getElementById('hackName').innerHTML += "<span style='color: red;'>4</span>";
+				 } else if ( words[i] === "e" ){
+					 document.getElementById('hackName').innerHTML += "<span style='color: green;'>3</span>";
+					 
+				 } else if ( words[i] === "i" ){
+					 document.getElementById('hackName').innerHTML += "<span style='color: blue;'>1</span>";				  
+				 } else if ( words[i] === "o" ){
+					 document.getElementById('hackName').innerHTML += "<span style='color: violet;'>0</span>";							 
+				 } else {
+					 document.getElementById('hackName').innerHTML += words[i];
+				 }
+				 
+								 
+			 }
+				  document.getElementById('hackName').innerHTML += "<br>";	
+		}
+	</script>
+	
+	
+	<script>
+	
+//		var likeCats = confirm("Тебе нравятся кошки?");
+//		if ( likeCats ){
+//			console.log("Ты классная кошка!");
+//		} else {
+//			console.log("Что ж не проблема. Всё равно ты молодец!");
+//		}
+	
+	</script>
+	
+	
+	<hr>
+	
+	
+<script> /***********************Игра Висилица***********************/
+
+/*//	выбираем случайное слово
+	var words = [
+		"колбаса",
+		"помидор",
+		"борщ",
+		"плов",
+		"пельмени",
+		"беляш"
+	];
+	
+	var word = words[ Math.floor(Math.random() * words.length) ];
+	
+// Создаём итоговый массив	
+	var answerArray = [];
+	for ( var i = 0; i < word.length; i++ ) {
+		answerArray[i] = "_";
+	}
+	
+	var remainingLetters = word.length;
+
+	// Переменная счёт
+ 	var score = word.length  +  4;
+	
+///////////////////////////// Основа игрового цикла
+	
+	while ( (remainingLetters > 0) && (score > 0) ) { // Основной код
+
+		// Показываем состояние игры
+		alert(answerArray.join(" "));
+
+		// Запрашиваем вариант ответа
+		var guess = prompt("Угадайте букву или нажмите отмена для выхода из игры");
+		guess = guess.toLowerCase();
+
+		if ( guess === null ) {
+			break; // Выходим из игрового цикла
+		} else if ( guess.length !== 1 ) {
+			alert( "Пожалуйста введите только одну букву." );
+		} else {
+
+			// Обновляем состояние игры
+			for ( var j = 0; j < word.length; j++) {
+				if ( word[j] === guess) {
+					answerArray[j] = guess;
+					remainingLetters--;
+				}
+			}
+		}
+
+// Подсчет попыток
+		score--;
+		if ( score < 1 ) {
+			alert( "Количество попыток исчерпано." );
+			break;
+		}
+
+		// Обновляем answerArray и remainingLetters для каждого вхождения угаданной буквы
+	} // Конец игрового цикла
+	
+	if ( score > 1) {
+		alert(answerArray.join(" "));
+		alert("Отлично! Было загадано слово " + word);
+	}
+*/
+/////////////////////////////////////// Вариант с функциями
+var pickWord = function () {
+	// Возвращает случайно выбранное слово
+	var words = [
+		"колбаса",
+		"помидор",
+		"борщ",
+		"плов",
+		"пельмени",
+		"беляши"
+	];
+	
+	var word = words[ Math.floor(Math.random() * words.length) ];
+	return word;
+};
+
+var setupAnswerArray = function (word) {
+	// Возвращает итоговый массив для заданного слова word
+	var answerArray = [];
+	for ( var i = 0; i < word.length; i++ ) {
+		answerArray[i] = "_";
+	}
+	
+	return answerArray;
+};
+var showPlayerProgress = function (answerArray) {
+	// С помощью alert отображает текущее состояние игры
+	alert(answerArray.join(" "));
+};
+var getGuess = function () {
+	// Запрашивает ответ игрока с помощью prompt
+	var guess = prompt("Угадайте букву или нажмите отмена для выхода из игры");
+	guess = guess.toLowerCase();
+	return guess;
+};
+var updateGameState = function (guess, word, answerArray) {
+	// Обновляет answerArray согласно ответу игрока (guess)
+	// возвращает число, обозначающее, сколько раз буква guess встречается в слове, 
+	// что бы можно было обновить значение remainingLetters
+	if ( guess === null ) {
+			break; // Выходим из игрового цикла
+		} else if ( guess.length !== 1 ) {
+			alert( "Пожалуйста введите только одну букву." );
+		} else {
+
+			// Обновляем состояние игры
+			for ( var j = 0; j < word.length; j++) {
+				if ( word[j] === guess) {
+					answerArray[j] = guess;
+					remainingLetters--;
+				}
+			} 
+			return remainingLetters;
+		}
+};
+
+var showAnswerAndCongratulatePlayer = function (answerArray) {
+	// С помощью alert показывает игроку отгаданное слово
+	// и поздравляет с победой
+	if ( score > 1) {
+		alert(answerArray.join(" "));
+		alert("Отлично! Было загадано слово " + word);
+	}
+};
+
+// загаданное слово
+var word = pickWord();
+var remainingLetters = word.length;
+// итоговый массив
+var answerArray = setupAnswerArray(word);
+// сколько  букв осталось угадать
+var remainingLetters = word.length;
+while ( remainingLetters > 0 ) {
+	showPlayerProgress(answerArray);
+	// ответ игрока
+	var guess = getGuess();
+	if (guess === null) {
+		break;
+	} else if (guess.length !== 1) {
+		alert("Пожалуйста, введите одиночную букву.");
+	} else {
+		// количество открытых букв
+		var correctGuesses = updateGameState(guess, word, answerArray);
+		remainingLetters -=correctGuesses;
+	}
+}
+showAnswerAndCongratulatePlayer(answerArray);
+	
+</script>
+
+
+<script> // Генератор дразнилок
+
+
+var generateRandomInsult = function (){
+
+var pickRandomWord = function ( words )	{
+	return words[Math.floor(Math.random()*words.length)];
+}
+
+var randomBodyParts = ["глаз","нос","череп"];
+var randomAdjectives = ["вонючая","унылая","дурацкая"];
+var randomWords = ["муха","выдра","дубина","мартышка","крыса"];
+var randomString = "У тебя " + pickRandomWord( randomBodyParts ) + " словно " + pickRandomWord( randomAdjectives ) + " " + pickRandomWord( randomWords ) + "!!!";
+document.getElementById('res').innerHTML = randomString;
+};
+</script>
+
+
+<script>
+	
+function multiply(mnog,mnoj) {
+	return mnog*mnoj;
+}
+
+function add(slog,slag) {
+	return slog + slag;
+}
+
+
+</script>
+
+
+<script> // проверяю схожесть массивов	
+var arr1 = [1,2,3];
+var arr2 = [4,5,6];
+var arr3 = [7,8,9,0];
+var arr4 = [1,2,3];
+
+function areArraySame(arr1,arr2){
+	if ( arr1.length !== arr2.length ){ // проверка количества элементов в массивах
+		return alert('Массивы не равны!');
+	}
+
+
+ var j = 0;
+	for (var i = 0; i < arr1.length; i++){
+		
+		if( arr1[i] !== arr2[j] ) {
+			return alert('Массивы не равны!!');		
+		}
+		j++;
+	}
+	alert("Массивы равны!");
+}
+</script>
+<button onClick="areArraySame(arr1,arr4);">кнопка 3</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

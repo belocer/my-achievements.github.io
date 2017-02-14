@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+<body>
+	<h1 id="main-heading">Привет, мир!</h1>
+	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+	<script>
+		
+/*	var headingElement = document.getElementById("main-heading");
+	console.log(headingElement.innerHTML);
+	var newHeadingText = prompt("Введите новый заголовок: ");
+	headingElement.innerHTML = newHeadingText;
+// Тоже самое на jquery
+	var newHeadingText = prompt("Введите новый заголовок: ");
+	$("#main-heading").text(newHeadingText);*/
+
+
+var friends = ["Вася","Коля","Русик","Стас","Серёга"];
+for (var i = 0; i < friends.length; i++) {
+	$("body").append("<p>"+friends[i]+"</p>");
+};
+$("#main-heading").text("Мои друзья");
+$("p").append(" лучший");
+
+// Мигающий заголовок
+/*var s = 1000;
+for (var j = 0; j < 5; j++){
+	s += 1000;
+	$("h1").fadeOut(s);
+	$("h1").fadeIn(s);
+}*/
+
+// Отложеная анимация
+// $("h1").fadeOut(1000).delay(5000).fadeIn(1000);
+
+// Прозрачность
+$("h1").fadeTo(2000, 0.2);
+
+function ppop () {
+	alert(1);
+}
+
+setInterval(ppop, 3000);
+
+	</script>
+
+</body>
+</html>

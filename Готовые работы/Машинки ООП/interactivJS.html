@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Интерактивное программирование</title>
+	<style>
+		
+		h1 {
+			width: 300px;
+		}
+
+	</style>
+</head>
+<body style="background-color: grey;">
+<div id="hope" style="box-shadow: 3px 3px 10px white; width:700px; height: 700px; display: inline-block; overflow: hidden; margin: 0 auto;">	
+	<h1 style="color: violet; box-shadow: 3px 3px 10px black;">Привет, мир!</h1>
+	<img id="heading" src="1.png"  alt="">
+</div>
+	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+	<script>
+		
+/*	var leftOffset = 0;
+	var moveHeading = function () {
+		$("#heading").offset({ left: leftOffset }).offset({ top: leftOffset });
+		leftOffset += 1;
+		if (leftOffset > 100) {
+			leftOffset = 0;
+		}		
+	};
+
+	setInterval(moveHeading, 30);
+*/
+	</script>
+
+<script>
+	
+/*var clickHandler = function(event) {
+	console.log("По оси X - " + event.pageX + " По оси Y - " + event.pageY);
+};
+$("h1").click(clickHandler);
+*/
+</script>
+
+<script>
+	// Бежит за мышкой
+// $("#hope").mousemove(function (event) {
+// 	$("#heading").offset({
+// 		left: event.pageX,
+// 		top: event.pageY
+// 	});
+// });
+
+	// Переставляет элемент в нужное место
+// $("#hope").click(function (event) {
+// 	$("#heading").offset({
+// 		left: event.pageX,
+// 		top: event.pageY
+// 	});
+// });
+
+	// Элемент по клику исчезает и появляется
+// var tiu = function(){
+// 	$("#heading").hide(1000).show(1000);
+// }
+// $("h1").click(tiu);
+
+</script>
+
+<script>
+	// Бешеное движение, БАГ.
+/*	var leftOffset = 0;
+	var topOffset = 100;
+	var rightOffset = 0;
+
+// Сдвигаю в право	
+var moveHeading = function () {
+	$("#heading").offset({ left: leftOffset });
+	leftOffset++;
+
+	if (leftOffset > 200) {
+		leftOffset = 200;
+		clearInterval(one1);
+		var two2 = setInterval(topdown, 30);
+
+			function topdown(){
+			$("#heading").offset({ top: topOffset });
+			topOffset++;
+			
+			if (topOffset > 300) {
+				topOffset = 300;
+				clearInterval(two2);
+				var three3 = setInterval(driveLeft, 30);
+
+				function driveLeft(){
+					$("#heading").offset({ left: leftOffset });
+					leftOffset--;
+
+					if (leftOffset < 1) {
+						leftOffset = 0;
+						clearInterval(three3);
+						var four4 = setInterval(topup, 30);
+						
+						function topup(){
+							$("#heading").offset({ top: topOffset });
+							topOffset--;
+						
+							if (topOffset < 100) {
+								topOffset = 100;
+								clearInterval(four4);
+								var one1 = setInterval(moveHeading, 30);
+							}
+						}
+					}
+				}
+			}
+		}
+	}		
+}
+
+
+var one1 = setInterval(moveHeading, 30);*/
+
+</script>
+
+</body>
+</html>
