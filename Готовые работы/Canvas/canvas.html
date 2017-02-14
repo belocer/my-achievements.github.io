@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="800"></canvas>
+	<script>
+		var canvas = document.getElementById("canvas");
+
+		var ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "#B2B500"
+ctx.fillRect(50,50,50,50); // голова
+ctx.fillStyle = "#B2B500"
+ctx.fillRect(70,50,10,70); // шея
+ctx.fillStyle = "green"
+ctx.fillRect(15,120,120,10); // руки
+ctx.fillStyle = "skyblue"
+ctx.fillRect(45,130,60,60); // туловище
+ctx.fillStyle = "green"
+ctx.fillRect(45,180,10,30); // нога правая
+ctx.fillRect(95,180,10,30); // нога левая
+// Контур глаза
+ctx.strokeRect(60,60,10,10); 
+// Контур глаза
+ctx.strokeRect(80,60,10,10);
+// Контур головы
+ctx.strokeStyle = "red"; // цвет контура
+ctx.lineWidth = 5; // толщина линии контура
+ctx.strokeRect(50,50,50,50); // x y width height
+
+ctx.strokeStyle = "Turquoise";
+ctx.lineWidth = 4;
+ctx.beginPath(); // Начало задачи координат линий
+ctx.moveTo(45,130); // точка начала линии
+ctx.lineTo(100,180); // точка координат конца линии
+ctx.moveTo(100,130); // точка начала линии
+ctx.lineTo(45,180); // точка координат конца линии
+ctx.stroke(); // Выполнить выше указанные команды рисования линий
+/*
+// второй чувак
+ctx.strokeStyle = "#00A05D"
+ctx.strokeRect(250,50,20,20);
+ctx.beginPath();
+ctx.moveTo(260,70); // шея и туловище
+ctx.lineTo(260,150);
+
+ctx.moveTo(260,90); // левая рука
+ctx.lineTo(300,60); 
+
+ctx.moveTo(260,90); // правая рука
+ctx.lineTo(220,60);
+
+ctx.moveTo(260,145); // левая нога
+ctx.lineTo(245,180);
+
+ctx.moveTo(260,145); // правая нога
+ctx.lineTo(300,180);
+ctx.stroke();
+
+// Домик
+ctx.fillStyle = "Blue";
+ctx.beginPath();
+ctx.moveTo(400, 100);
+ctx.lineTo(400, 60);
+ctx.lineTo(430, 30);
+ctx.lineTo(460, 60);
+ctx.lineTo(460, 100);
+ctx.lineTo(400, 100);
+ctx.fill();*/
+
+/*	
+for (var i = 0; i < 50; i++)	{
+		ctx.fillRect(i*10,i*10,10,10);
+	}
+*/
+
+ctx.lineWidth = 2;
+ctx.strokeStyle = "Green";
+
+ctx.beginPath();
+ctx.arc(75, 80, 10, 0, Math.PI, false); // половина круга 180 градусов
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(500, 50, 20, 0, Math.PI / 2, false); // четверть круга 90 градусов
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(550, 50, 20, 0, Math.PI * 2, false); // круг 360 градусов
+ctx.stroke();
+
+	</script>
+</body>
+</html>
