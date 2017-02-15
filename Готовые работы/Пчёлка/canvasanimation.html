@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Animation</title>
+	<style>
+		body{
+			background-color: #E1E1E1;
+		}
+		canvas{
+			display: inline-block;
+			box-shadow: 0 0 10px #656565;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400" style="margin: 0 auto;"></canvas>
+
+<script> // Двигаем квалрат на холсте canvas
+/*	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	var position = 0;
+
+	setInterval(function(){
+		ctx.clearRect(0, 0, 200, 200);
+		ctx.fillRect(position, 0, 20, 20);
+
+		position++;
+		if (position > 200) {
+			position = 0;
+		}
+	},150);*/
+
+</script>
+
+<script> // Увеличиваем квадрат на холсте canvas
+/*	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	var size = 0;
+
+	setInterval(function(){
+		ctx.fillStyle = "#2E3192";
+		ctx.clearRect(0, 0, 200, 200);
+		ctx.fillRect(0, 0, size, size);
+
+		size++;
+		if (size > 200) {
+			size = 0;
+		}
+	},150);
+*/
+</script>
+
+<script> // меняю цвет динамически
+/*	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	var red = 0;
+	var green = 0;
+	var blue = 0;
+	var col = "rgb("+red+","+green+","+blue+")";
+
+	setInterval(function(){
+		ctx.fillStyle = col;
+		ctx.clearRect(0, 0, 200, 200);
+		ctx.fillRect(0, 0, 50, 50);
+
+			red++;
+			green+=2;
+			blue+=3;
+
+		col = "rgb("+red+","+green+","+blue+")";
+		if (red > 254 || green > 254 || blue > 254 ) {
+			setInterval(function(){
+			red--;
+			green-=2;
+			blue--;
+			},70);
+
+		}
+	},50);*/
+
+</script>
+
+
+<script> ///////////////////////////////////////////////////// Пчела
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var x = 200;
+var y = 200;
+
+setInterval(function(){
+ctx.clearRect(0, 0, 400, 400);
+
+drawBee(x,y);
+x = update(x);
+y = update(y);
+
+//ctx.strokeRect(0, 0, 400, 400);
+
+},30);
+
+	var circle = function (x, y, radius, fillCircle){ // функция заполняет либо нет окружности
+		ctx.beginPath();
+		ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+		if (fillCircle) {
+			ctx.fill(); // Заполяем
+		} else {
+			ctx.stroke(); // Контур
+		}
+	};
+
+	var drawBee = function (x, y) { // Нарисовать пчелу
+		ctx.lineWidth = 2; // Толщина линии
+		ctx.strokeStyle = "Black";
+		ctx.fillStyle = "Gold";
+
+		circle(x, y, 8, true);
+		circle(x, y, 8, false);
+		circle(x-5, y-11, 5, false);
+		circle(x+5, y-11, 5, false);
+		circle(x-2, y-1, 2, false);
+		circle(x+2, y-1, 2, false);
+	};
+
+
+var update = function (coordinate) {
+	var offset = Math.random()*4-2;
+
+	coordinate += offset;
+
+	if (coordinate > 200){
+		coordinate = 200;
+	}
+
+	if (coordinate < 0){
+		coordinate = 0;
+	}
+
+	return coordinate;
+};
+
+
+
+</script>
+
+</body>
+</html>
