@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Animation</title>
+	<style>
+		body{
+			background-color: #E1E1E1;
+		}
+		canvas{
+			display: inline-block;
+			box-shadow: 0 0 10px #656565;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="700" height="400" style="margin: 0 auto;"></canvas>
+
+<script> 
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var width = canvas.width;  // Ширина берётся из размеров тега canvas
+var height = canvas.height; // Ширина берётся из размеров тега canvas
+
+function selfRandom(min, max) { // Для рандомного начального положения шаров
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var Ball = function () { /////////////////////////////////////// КОНСТРУКТОР --== Ball ==--
+	this.x = selfRandom(40, width-10);
+	this.y = selfRandom(40, height-10);
+	this.xSpeed = -2; // Каждые 30 мл.сек сдвигает на заданные здесь пикселы
+	this.ySpeed = 3; // Можно изменить начальную скорость мяча
+	var colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Violet", "Gold"];
+	this.color = colors[Math.floor(Math.random() * colors.length)];
+};
+
+var circle = function (x, y, radius, fillCircle, colors) { // рисуем шарик и выбираем заполнять или нет
+	ctx.beginPath();
+	ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+
+	if(fillCircle) {
+		ctx.fillStyle = colors;
+		ctx.fill(); // Заполняем
+	} else {
+		ctx.stroke(); // Только контур
+	}
+
+ctx.strokeStyle = colors;
+
+};
+
+// Ball.prototype.pickRandomColors = function () {
+// 	var colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Violet", "Gold"];
+// 	return colors[Math.floor(Math.random() * colors.length)];
+// };
+
+Ball.prototype.draw = function (color) { // метод для ball типа что бы запустить рисование шарика
+	
+	circle(this.x, this.y, 20, false, color);
+	
+	//circle(this.x, this.y, 20, false, balls[0]["color"]);	
+};
+
+Ball.prototype.move = function () { // задем смещение
+	this.x += this.xSpeed;
+	this.y += this.ySpeed;
+};
+
+Ball.prototype.checkCollision = function (){ // отрабатываем удары о стенку
+
+	if (this.x < 0 || this.x > width) {
+		this.xSpeed = -this.xSpeed;
+	}
+
+	if (this.y < 0 || this.y > height) {
+		this.ySpeed = -this.ySpeed;
+	}
+};
+
+var ball = new Ball(); 
+var balls = []; // создаём массив
+for (var i = 0; i < 10; i++) { // заполняем массив.
+	balls.push( new Ball() );
+}
+
+setInterval(function() { // Заставляем циклически всё работать
+	//ctx.clearRect(0, 0, width, height); // очищаем перед новой прорисовкой шарика если убрать эффект тоже будет крутой =)
+
+for (var i = 0; i < balls.length; i++) { // цикл по шарикам вместо обработки одного шарика
+	
+	balls[i].draw(balls[i]["color"]);
+	balls[i].move();
+	balls[i].checkCollision();
+};
+
+
+
+ //for ( var j = 0; j < 10; j++ ) {
+ 	//alert(balls[j]["y"]);
+		//if( (balls[j]["x"] == balls[j--]["x"]) && (balls[j]["y"] == balls[j--]["y"]) ) {
+			//balls[i]["xSpeed"] = -balls[i]["xSpeed"];
+			//balls[i]["ySpeed"] = -balls[i]["ySpeed"];
+
+			//alert("fgfg");
+			//console.log("Cовпадение координат"+balls[j]["y"]);
+		//}
+
+	//console.log("1 Значение "+balls[j]["x"]," Второе "+balls[j]["y"]);
+ //}
+
+ ctx.strokeRect(0,0, width, height);
+},60);
+
+console.log(balls);
+</script>
+
+</body>
+</html>
