@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="jquery-ui.min.css">
+	<link rel="stylesheet" href="site_style.css">
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+<script>
+$(document).ready(function() {
+
+	// Перетаскиваемый элемент
+ 	$('#imgCat img').draggable({
+		opacity : 0.7,
+		//revert : 'invalid',
+		zIndex : 100,
+		snap : '#wrapper'
+	});// Конец draggable		
+		
+$('#game').mouseup(function(){
+
+	// Координаты изображений
+	var a = document.getElementById('cat1').getBoundingClientRect();
+	var img_1_X = a.left + 2;
+	var img_1_Y = a.top + 2;
+	var b = document.getElementById('cat2').getBoundingClientRect();
+	var img_2_X = b.left + 2;
+	var img_2_Y = b.top + 2;
+	var c = document.getElementById('cat3').getBoundingClientRect();
+	var img_3_X = c.left + 2;
+	var img_3_Y = c.top + 2;
+	var d = document.getElementById('cat4').getBoundingClientRect();
+	var img_4_X = d.left + 2;
+	var img_4_Y = d.top + 2;
+	
+	// Координаты мест под них
+	var a = document.getElementById('one').getBoundingClientRect();
+	var wrap_1_X = a.left;
+	var wrap_1_Y = a.top;
+	var b = document.getElementById('two').getBoundingClientRect();
+	var wrap_2_X = b.left + 216;
+	var wrap_2_Y = b.top - 162;
+	var c = document.getElementById('three').getBoundingClientRect();
+	var wrap_3_X = c.left + 216;
+	var wrap_3_Y = c.top - 162;
+	var d = document.getElementById('four').getBoundingClientRect();
+	var wrap_4_X = d.left;
+	var wrap_4_Y = d.top - 324;
+	
+	// Вывожу координаты картинок и их мест
+	$('#left1').text('Координаты img: ' + img_1_X + ' | ' + img_1_Y);
+	$('#top1').text('Координаты wrap: ' + wrap_1_X + ' | ' + wrap_1_Y);
+	
+	$('#left2').text('Координаты img: ' + img_2_X + ' || ' + img_2_Y);
+	$('#top2').text('Координаты wrap: ' + wrap_2_X + ' || ' + wrap_2_Y);
+	
+	$('#left3').text('Координаты img: ' + img_3_X + ' ||| ' + img_3_Y);
+	$('#top3').text('Координаты wrap: ' + wrap_3_X + ' ||| ' + wrap_3_Y);
+	
+	$('#left4').text('Координаты img: ' + img_4_X + ' |V ' + img_4_Y);
+	$('#top4').text('Координаты wrap: ' + wrap_4_X + ' |V ' + wrap_4_Y);
+	
+	// Сверка координат изображений и их мест
+	if( (img_1_X == wrap_1_X && img_1_Y == wrap_1_Y) && 
+	    (img_2_X == wrap_2_X && img_2_Y == wrap_2_Y) && 
+	    (img_3_X == wrap_3_X && img_3_Y == wrap_3_Y) &&
+	    (img_4_X == wrap_4_X && img_4_Y == wrap_4_Y) ){
+
+		$('#wellDone').dialog({
+			width: 640,
+			height: 570
+		});
+	}
+}); // Конец mouse up
+			
+}); // Конец ready
+
+	
+</script>
+
+</head>
+<body>
+<div id="wellDone">
+	<img src="cat/5.jpeg" alt="cat">
+</div>
+<div id="game">
+	<div id="imgCat">
+		<img src="cat/2.png" alt="cat2" id="cat2">	
+		<img src="cat/1.png" alt="cat1" id="cat1">
+		<img src="cat/3.png" alt="cat3" id="cat3">
+		<img src="cat/4.png" alt="cat4" id="cat4">
+	</div>
+	<div id="wrapper">
+		<div id="one"></div>
+		<div id="two"></div>
+		<div id="three"></div>
+		<div id="four"></div>		
+	</div>
+</div>
+<br>
+
+<!--
+<div id="left1"></div>
+<div id="left2"></div>
+<div id="left3"></div>
+<div id="left4"></div>
+<div id="top1"></div>
+<div id="top2"></div>
+<div id="top3"></div>
+<div id="top4"></div>
+	<br><br>
+	<hr> <br>
+	<button id="but">Проверить</button>
+-->
+</body>
+</html>
