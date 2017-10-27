@@ -36,7 +36,6 @@ function redStart (r = 20, g = 20, b = 20) {
 			clearInterval(timerIdr);
 			greenStart(r, g, b);
 		}
-		//console.log(bg.style.background);
 	}, 100);
 }
 
@@ -51,7 +50,6 @@ function greenStart(r, g, b) {
 			clearInterval(timerIdg);
 			blueStart(r, g, b);
 		}
-		//console.log(bg.style.background);
 	}, 100);
 }
 	
@@ -79,9 +77,6 @@ function blueStart(r, g, b) {
 				clearInterval(timerIdg);
 				redStart(r, g, b);
 			}
-
-		//console.log(bg.style.background);
-
 	}, 100);
 }
 
