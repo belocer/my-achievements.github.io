@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BG</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="bg">
+		<div class="bg_ton"></div>
+	</div>
+
+<script>
+var bg = document.querySelector('.bg');
+
+//console.log(bg);
+
+var r = 20;
+var g = 20;
+var b = 240;
+
+var timerIdr = 0;
+var timerIdg = 0;
+var timerIdb = 0;
+
+redStart(r, g, b);
+
+function redStart (r = 20, g = 20, b = 20) {
+	timerIdr = setInterval(function () {
+		r++;
+		b--;
+		bg.style.background = "rgba("+ r +","+ g +","+ b +", 1)";
+
+		if (r == 240) {
+			clearInterval(timerIdr);
+			greenStart(r, g, b);
+		}
+		//console.log(bg.style.background);
+	}, 100);
+}
+
+
+function greenStart(r, g, b) {
+	timerIdg = setInterval(function () {
+		g++;
+		r--;
+		bg.style.background = "rgba("+ r +","+ g +","+ b +", 1)";
+
+		if (g == 240) {
+			clearInterval(timerIdg);
+			blueStart(r, g, b);
+		}
+		//console.log(bg.style.background);
+	}, 100);
+}
+	
+		
+function blueStart(r, g, b) {
+	timerIdb = setInterval(function () {
+		b++;
+		g--
+		bg.style.background = "rgba("+ r +","+ g +","+ b +", 1)";
+
+		if (r <= 20 && g <= 20 && b >= 240) {
+
+			clearInterval(timerIdb);
+
+			timerIdCicle = setInterval(function () {
+				b--;
+				if (b == 20){
+					clearInterval(timerIdCicle);
+				}
+			},100);
+
+			clearInterval(timerIdg);
+			redStart(r, g, b);
+		} else if (r == 20 && g == 20 && b == 20) {
+				clearInterval(timerIdg);
+				redStart(r, g, b);
+			}
+
+		//console.log(bg.style.background);
+
+	}, 100);
+}
+
+</script>
+
+
+<!-- Из чёрного в белый -->
+<script>
+/*var bg = document.querySelector('.bg');
+var r = 0;
+var g = 0;
+var b = 0;
+setInterval(function () {
+	r++;
+	g++;
+	b++;
+	bg.style.background = "rgba("+ r +","+ g +","+ b +", 1)";
+}, 5);*/
+</script>
+
+</body>
+</html>
