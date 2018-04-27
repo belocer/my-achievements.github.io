@@ -1,8 +1,49 @@
 [
   {
-    "fghj": "dsdsd"
+  "Роман": "Привет"
   },
   {
-  "dsds": "dsdsgf"
-  }
+    "fetch": 
+    "fetch('https://raw.githubusercontent.com/belocer/my-achievements.github.io/master/i.json')
+      .then(response => {
+              if (response.status  === 404) {
+                  return Promise.reject();
+              }
+              return response.json()
+          })
+          .then(i => console.log(i))
+    .catch(() => console.log('ошибка'));"
+  },
+  {"Promise": 
+"function fn(a, b) {
+    return new Promise(function (resolve, reject) {
+        if (a === b) {
+            resolve();
+        } else {
+            reject();
+        }
+    });
+}
+
+
+btn.addEventListener('click', () => {
+    fn(2, 2)
+        .then(() => fn(5, 4),
+            () => {
+                console.log('Резолв1 разрешился НЕ успешно!');
+                fn(5, 4)
+            })
+        .then(() => fn(8, 8),
+            () => {
+                console.log('Резолв2 разрешился НЕ успешно!');
+                fn(8, 8)
+            })
+        .then(() => fn(7, 7),
+            () => {
+                console.log('Резолв3 разрешился НЕ успешно!');
+                fn(7, 7)
+            })
+        .then(() => fn(5, 5), () => console.log('Резолв4 разрешился НЕ успешно!!!'));
+});"
+}
 ]
