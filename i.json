@@ -5,6 +5,7 @@
   {
     "fetch": "fetch"
   },
-  {"Promise": "function"
+  {
+    "Promise": "function"
   }
 ]
