@@ -1,11 +1,11 @@
 [
   {
-  "Роман": "Привет"
+  "id": "Value"
   },
   {
-    "fetch": "fetch"
+    "id": "Value"
   },
   {
-    "Promise": "function"
+    "id": "Value"
   }
 ]
