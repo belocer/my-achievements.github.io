@@ -1,152 +1,49 @@
 [
   {
-    "name": "Frank"
+  "Роман": "Привет"
   },
   {
-    "name": "Cotopaxi"
+    "fetch": 
+    "fetch('https://raw.githubusercontent.com/belocer/my-achievements.github.io/master/i.json')
+      .then(response => {
+              if (response.status  === 404) {
+                  return Promise.reject();
+              }
+              return response.json()
+          })
+          .then(i => console.log(i))
+    .catch(() => console.log('ошибка'));"
   },
-  {
-    "name": "Teasdale"
-  },
-  {
-    "name": "Belfair"
-  },
-  {
-    "name": "Emory"
-  },
-  {
-    "name": "Toftrees"
-  },
-  {
-    "name": "Osage"
-  },
-  {
-    "name": "Dotsero"
-  },
-  {
-    "name": "Muir"
-  },
-  {
-    "name": "Nicut"
-  },
-  {
-    "name": "Camas"
-  },
-  {
-    "name": "Freelandville"
-  },
-  {
-    "name": "Romeville"
-  },
-  {
-    "name": "Welch"
-  },
-  {
-    "name": "Belleview"
-  },
-  {
-    "name": "Troy"
-  },
-  {
-    "name": "Bladensburg"
-  },
-  {
-    "name": "Worton"
-  },
-  {
-    "name": "Mappsville"
-  },
-  {
-    "name": "Colton"
-  },
-  {
-    "name": "Vaughn"
-  },
-  {
-    "name": "Boonville"
-  },
-  {
-    "name": "Tuskahoma"
-  },
-  {
-    "name": "Madrid"
-  },
-  {
-    "name": "Garberville"
-  },
-  {
-    "name": "Shrewsbury"
-  },
-  {
-    "name": "Flintville"
-  },
-  {
-    "name": "Harmon"
-  },
-  {
-    "name": "Ellerslie"
-  },
-  {
-    "name": "Moscow"
-  },
-  {
-    "name": "Topaz"
-  },
-  {
-    "name": "Marne"
-  },
-  {
-    "name": "Laurelton"
-  },
-  {
-    "name": "Worcester"
-  },
-  {
-    "name": "Advance"
-  },
-  {
-    "name": "Sterling"
-  },
-  {
-    "name": "Irwin"
-  },
-  {
-    "name": "Chesterfield"
-  },
-  {
-    "name": "Conestoga"
-  },
-  {
-    "name": "Wikieup"
-  },
-  {
-    "name": "Hampstead"
-  },
-  {
-    "name": "Brule"
-  },
-  {
-    "name": "Warren"
-  },
-  {
-    "name": "Springville"
-  },
-  {
-    "name": "Noblestown"
-  },
-  {
-    "name": "Saranap"
-  },
-  {
-    "name": "Frierson"
-  },
-  {
-    "name": "Kilbourne"
-  },
-  {
-    "name": "Cliffside"
-  },
-  {
-    "name": "Jacksonwald"
-  }
+  {"Promise": 
+"function fn(a, b) {
+    return new Promise(function (resolve, reject) {
+        if (a === b) {
+            resolve();
+        } else {
+            reject();
+        }
+    });
+}
+
+
+btn.addEventListener('click', () => {
+    fn(2, 2)
+        .then(() => fn(5, 4),
+            () => {
+                console.log('Резолв1 разрешился НЕ успешно!');
+                fn(5, 4)
+            })
+        .then(() => fn(8, 8),
+            () => {
+                console.log('Резолв2 разрешился НЕ успешно!');
+                fn(8, 8)
+            })
+        .then(() => fn(7, 7),
+            () => {
+                console.log('Резолв3 разрешился НЕ успешно!');
+                fn(7, 7)
+            })
+        .then(() => fn(5, 5), () => console.log('Резолв4 разрешился НЕ успешно!!!'));
+});"
+}
 ]
