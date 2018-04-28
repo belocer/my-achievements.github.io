@@ -1,11 +1,67 @@
 [
   {
-    "id": "Value"
+    "fetch": "fetch('https://raw.githubusercontent.com/belocer/my-achievements.github.io/master/i.json')
+              .then(response => {
+                  if (response.status >= 400) {
+                      return Promise.reject();
+                  }
+                  return response.json()
+                })
+             .then(i => console.log(i))
+             .catch(() => console.log('ошибка'));"
   },
   {
-    "id": "Value"
+    "promise": "function fn(a, b) {
+    return new Promise(function (resolve, reject) {
+        if (a === b) {
+            resolve();
+        } else {
+            reject();
+        }
+    });
+}
+
+btn.addEventListener('click', () => {
+    fn(2, 2)
+        .then(() => fn(5, 4),
+            () => {
+                console.log('Резолв1 разрешился НЕ успешно!');
+                fn(5, 4)
+            })
+        .then(() => fn(8, 8),
+            () => {
+                console.log('Резолв2 разрешился НЕ успешно!');
+                fn(8, 8)
+            })
+        .then(() => fn(7, 7),
+            () => {
+                console.log('Резолв3 разрешился НЕ успешно!');
+                fn(7, 7)
+            })
+        .then(() => fn(5, 5), () => console.log('Резолв4 разрешился НЕ успешно!!!'));
+});"
   },
   {
-    "id": "Value"
+    "data": "<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Test</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+	<div><input type='text' data-rule='backgroundColor' value='#fff'></div>
+	<div><input type='text' data-rule='color' value='#000'></div>
+	<div><input type='text' data-rule='fontSize' value='16px'></div>
+	<div id='content'>
+		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo veniam consequuntur quas adipisci sunt cum numquam nostrum possimus quibusdam fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo veniam consequuntur quas adipisci sunt cum numquam nostrum possimus quibusdam fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo veniam consequuntur quas adipisci sunt cum numquam nostrum possimus quibusdam fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo veniam consequuntur quas adipisci sunt cum numquam nostrum possimus quibusdam fuga.</span>
+	</div>
+<script>
+document.addEventListener('keyup', (e) => {
+	content.style[e.target.dataset.rule] = e.target.value;
+});
+</script>
+</body>
+</html> "
   }
 ]
