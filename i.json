@@ -8,8 +8,7 @@
                 })
              .then(i => console.log(i))
              .catch(() => console.log('ошибка'));"
-  },
-  {
+ ,
     "promise": "function fn(a, b) {
     return new Promise(function (resolve, reject) {
         if (a === b) {
@@ -39,8 +38,7 @@ btn.addEventListener('click', () => {
             })
         .then(() => fn(5, 5), () => console.log('Резолв4 разрешился НЕ успешно!!!'));
 });"
-  },
-  {
+,
     "data": "<!DOCTYPE html>
 <html lang='en'>
 <head>
