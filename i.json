@@ -1,5 +1,4 @@
-[
-  {
+{
     "fetch": "fetch('https://raw.githubusercontent.com/belocer/my-achievements.github.io/master/i.json')
               .then(response => {
                   if (response.status >= 400) {
@@ -64,4 +63,3 @@ document.addEventListener('keyup', (e) => {
 </body>
 </html> "
   }
-]
